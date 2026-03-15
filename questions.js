@@ -1069,6 +1069,19 @@ const questions = [
         answer: 1,
         points: 1
     }
+    },
+    {
+        category: "Tecnología e Innovación",
+        question: "¿Qué es la Inteligencia Artificial?",
+        options: [
+            "Un robot que limpia la casa.",
+            "La capacidad de las máquinas para aprender y realizar tareas humanas.",
+            "Un juego de video antiguo."
+        ],
+        answer: 1,
+        points: 1
+    }
 ];
+
 
 export default questions;

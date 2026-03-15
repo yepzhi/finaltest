@@ -129,10 +129,8 @@ function init() {
     // Toggle logic for Survey
     setupToggles();
 
-    // Detect browser language or default to ES
-    const browserLang = navigator.language.split('-')[0];
-    if (translations[browserLang]) setLanguage(browserLang);
-    else setLanguage('es');
+    // Default to Spanish as requested
+    setLanguage('es');
 }
 
 function checkAdminPassword() {
