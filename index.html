@@ -125,6 +125,30 @@
                                 <button class="toggle-btn" data-val="no" data-i18n="opt_no">No</button>
                             </div>
                         </div>
+                        <div class="toggle-item">
+                            <label data-i18n="label_familySTEM">¿Tus papás te hablan de tecnología o ciencia?</label>
+                            <div class="mini-toggle" data-key="familySTEM">
+                                <button class="toggle-btn active" data-val="yes" data-i18n="opt_yes">Sí</button>
+                                <button class="toggle-btn" data-val="no" data-i18n="opt_no">No</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="label_relativesSTEM">¿Hay ingenieros o científicos en la familia?</label>
+                            <div class="toggle-group" id="relativesSTEM">
+                                <button class="toggle-btn active" data-val="yes" data-i18n="opt_yes">Sí</button>
+                                <button class="toggle-btn" data-val="no" data-i18n="opt_no">No</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="label_admiration">¿Sientes admiración por ellos?</label>
+                            <div class="toggle-group" id="admirationToggle">
+                                <button class="toggle-btn active" data-val="yes" data-i18n="opt_yes">Sí</button>
+                                <button class="toggle-btn" data-val="no" data-i18n="opt_no">No</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -188,12 +212,31 @@
         </section>
     </div>
 
+    <!-- Discreet Admin Access -->
+    <footer class="discreet-footer">
+        <button id="adminBtn" class="admin-dot-btn" title="Admin Access"></button>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="modal">
+        <div class="glass-card modal-content">
+            <h2>Admin Login</h2>
+            <input type="password" id="adminPassword" placeholder="Contraseña">
+            <button id="loginBtn" class="btn btn-primary">Entrar</button>
+            <button id="closeModal" class="btn btn-secondary">Cerrar</button>
+        </div>
+    </div>
+
     <!-- Background Elements -->
     <div class="bg-elements">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
     </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
     <script type="module" src="main.js"></script>
 </body>
