@@ -51,13 +51,20 @@
                 </div>
 
                 <div class="pisa-badge">
-                    <img src="https://www.oecd.org/pisa/pisa-logo.png" alt="PISA" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/OECD_logo.svg/2560px-OECD_logo.svg.png'; this.style.height='20px';">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/OECD_logo.svg/2560px-OECD_logo.svg.png" alt="PISA" style="height: 20px;">
                     <span data-i18n="pisa_text">Validado bajo Estándares PISA de Alfabetización Científica</span>
                 </div>
 
-                <button id="startBtn" class="btn btn-primary" data-i18n="btn_start">Continuar</button>
-                
-                <p class="footnote" data-i18n="footnote">Este diagnóstico evalúa comprensión de términos y estándares generales de ciencia y tecnología.</p>
+                <div class="welcome-actions">
+                    <button id="startBtn" class="btn btn-primary" data-i18n="btn_start">Continuar</button>
+                    <div class="resume-box">
+                        <span data-i18n="already_have_folio">¿Ya tienes un folio?</span>
+                        <div class="resume-input-group">
+                            <input type="text" id="resumeFolio" placeholder="JSTEM-XXXXX" maxlength="11">
+                            <button id="resumeBtn" class="btn-icon">➜</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

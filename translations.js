@@ -48,7 +48,16 @@ const translations = {
         cat_eng: "Ingeniería",
         cat_code: "Código",
         cat_future: "Futuro",
-        cat_math: "Matemáticas"
+        cat_math: "Matemáticas",
+        already_have_folio: "¿Ya tienes un folio?",
+        folio_label: "FOLIO:",
+        folio_generated: "Se ha generado tu folio de seguimiento. Guárdalo para futuras referencias.",
+        quiz_completed_title: "¡Test Completado!",
+        email_confirmation: "Se ha enviado una confirmación a tu correo (Simulado).",
+        btn_resume: "Retomar",
+        invalid_folio: "Folio no válido o no encontrado.",
+        time_warning: "¡Se acaba el tiempo!",
+        question_timer: "Tiempo pregunta:"
     },
     en: {
         welcome_title: "SIIP NextGEN <span class='highlight'>STEM Test</span>",
@@ -99,7 +108,16 @@ const translations = {
         cat_eng: "Engineering",
         cat_code: "Coding",
         cat_future: "Future",
-        cat_math: "Mathematics"
+        cat_math: "Mathematics",
+        already_have_folio: "Already have a folio?",
+        folio_label: "FOLIO:",
+        folio_generated: "Your tracking folio has been generated. Save it for future reference.",
+        quiz_completed_title: "Test Completed!",
+        email_confirmation: "A confirmation has been sent to your email (Simulated).",
+        btn_resume: "Resume",
+        invalid_folio: "Invalid folio or not found.",
+        time_warning: "Time's running out!",
+        question_timer: "Question time:"
     },
     cn: {
         welcome_title: "SIIP NextGEN <span class='highlight'>STEM 测试</span>",
@@ -150,7 +168,16 @@ const translations = {
         cat_eng: "工程学",
         cat_code: "代码",
         cat_future: "未来",
-        cat_math: "数学"
+        cat_math: "数学",
+        already_have_folio: "已有编号？",
+        folio_label: "编号:",
+        folio_generated: "您的追踪编号已生成。请妥善保存以备后用。",
+        quiz_completed_title: "测试已完成！",
+        email_confirmation: "确认信息已发送至您的邮箱（模拟）。",
+        btn_resume: "恢复",
+        invalid_folio: "编号无效或未找到。",
+        time_warning: "时间快到了！",
+        question_timer: "提问时间:"
     }
 };
 

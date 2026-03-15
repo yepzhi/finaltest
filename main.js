@@ -25,7 +25,9 @@ try {
 const state = {
     currentQuestionIndex: 0,
     answers: [],
+    shuffledQuestions: [],
     userEmail: '',
+    folio: '',
     surveyData: {
         firstName: '',
         lastName: '',
@@ -44,7 +46,10 @@ const state = {
     endTime: null,
     language: 'es',
     timerInterval: null,
-    secondsElapsed: 0
+    questionTimerInterval: null,
+    secondsElapsed: 0,
+    questionSecondsRemaining: 30, // Anti-cheat timer
+    folioSaved: false
 };
 
 // DOM Elements
@@ -85,6 +90,10 @@ const elements = {
     timeVal: document.getElementById('timeVal'),
     timerDisplay: document.getElementById('timerDisplay'),
     langBtns: document.querySelectorAll('.lang-btn'),
+    
+    // Resume UI
+    resumeFolio: document.getElementById('resumeFolio'),
+    resumeBtn: document.getElementById('resumeBtn'),
 
     // Admin Elements
     adminBtn: document.getElementById('adminBtn'),
@@ -101,6 +110,7 @@ function init() {
     
     elements.startBtn.addEventListener('click', goToSurvey);
     elements.beginTestBtn.addEventListener('click', startQuiz);
+    elements.resumeBtn.addEventListener('click', () => resumeQuizWithFolio(elements.resumeFolio.value.trim()));
     elements.prevBtn.addEventListener('click', showPrevious);
     elements.nextBtn.addEventListener('click', showNext);
     elements.retryBtn.addEventListener('click', resetQuiz);
@@ -221,10 +231,32 @@ function startQuiz() {
         return;
     }
 
+    if (!state.folio) {
+        state.folio = generateFolio();
+        state.shuffledQuestions = shuffleArray([...questions]);
+    }
+
     state.startTime = new Date();
     switchScreen('quiz');
     startTimer();
     loadQuestion();
+}
+
+function generateFolio() {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+    let result = 'JSTEM-';
+    for (let i = 0; i < 5; i++) {
+        result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 function switchScreen(screenKey) {
@@ -234,7 +266,7 @@ function switchScreen(screenKey) {
 }
 
 function loadQuestion() {
-    const question = questions[state.currentQuestionIndex];
+    const question = state.shuffledQuestions[state.currentQuestionIndex];
     
     // Category mapping for translations
     const categoryMap = {
@@ -271,7 +303,7 @@ function loadQuestion() {
     elements.questionText.textContent = question.question;
     elements.currentQuestionNum.textContent = state.currentQuestionIndex + 1;
     
-    const progress = ((state.currentQuestionIndex + 1) / questions.length) * 100;
+    const progress = ((state.currentQuestionIndex + 1) / state.shuffledQuestions.length) * 100;
     elements.progressBar.style.width = `${progress}%`;
     
     elements.optionsContainer.innerHTML = '';
@@ -290,8 +322,49 @@ function loadQuestion() {
     });
     
     elements.prevBtn.disabled = state.currentQuestionIndex === 0;
-    elements.nextBtn.innerHTML = state.currentQuestionIndex === questions.length - 1 ? translations[state.language].btn_finish : translations[state.language].btn_next;
+    elements.nextBtn.innerHTML = state.currentQuestionIndex === state.shuffledQuestions.length - 1 ? translations[state.language].btn_finish : translations[state.language].btn_next;
     elements.nextBtn.disabled = state.answers[state.currentQuestionIndex] === null;
+
+    startQuestionTimer();
+}
+
+function startQuestionTimer() {
+    clearInterval(state.questionTimerInterval);
+    state.questionSecondsRemaining = 30; // 30 seconds per question
+    updateQuestionTimerUI();
+
+    state.questionTimerInterval = setInterval(() => {
+        state.questionSecondsRemaining--;
+        updateQuestionTimerUI();
+
+        if (state.questionSecondsRemaining <= 0) {
+            clearInterval(state.questionTimerInterval);
+            autoAdvanceOnTimeout();
+        }
+    }, 1000);
+}
+
+function updateQuestionTimerUI() {
+    const timerLabel = translations[state.language].question_timer || 'Time:';
+    elements.timerDisplay.innerHTML = `
+        <span data-i18n="time_elapsed">${translations[state.language].time_elapsed}</span> <span class="mono">${formatTime(state.secondsElapsed)}</span>
+        <span style="margin-left: 20px; color: ${state.questionSecondsRemaining < 10 ? 'var(--accent)' : 'var(--primary)'}">
+            ${timerLabel} <span class="mono">${state.questionSecondsRemaining}s</span>
+        </span>
+    `;
+}
+
+function formatTime(totalSeconds) {
+    const mins = Math.floor(totalSeconds / 60);
+    const secs = totalSeconds % 60;
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+function autoAdvanceOnTimeout() {
+    if (state.answers[state.currentQuestionIndex] === null) {
+        state.answers[state.currentQuestionIndex] = -1; // Mark as skipped/timeout
+    }
+    showNext();
 }
 
 function selectOption(index) {
@@ -311,9 +384,10 @@ function showPrevious() {
 }
 
 function showNext() {
-    if (state.currentQuestionIndex < questions.length - 1) {
+    if (state.currentQuestionIndex < state.shuffledQuestions.length - 1) {
         state.currentQuestionIndex++;
         loadQuestion();
+        syncProgressToFirebase();
     } else {
         finishQuiz();
     }
@@ -322,8 +396,19 @@ function showNext() {
 function finishQuiz() {
     state.endTime = new Date();
     stopTimer();
+    clearInterval(state.questionTimerInterval);
     const results = calculateResults();
     saveResultsToFirebase(results);
+    
+    // Show Folio and Confirmation in Results
+    elements.categoryResults.innerHTML += `
+        <div class="glass-card" style="margin-top: 30px; padding: 20px;">
+            <p style="color: var(--primary); font-weight: 800; font-size: 1.2rem;">${translations[state.language].folio_label} ${state.folio}</p>
+            <p style="font-size: 0.8rem; opacity: 0.8;">${translations[state.language].folio_generated}</p>
+            <p style="margin-top: 10px; color: var(--secondary); font-weight: 600;">${translations[state.language].email_confirmation}</p>
+        </div>
+    `;
+    
     switchScreen('results');
 }
 
@@ -331,7 +416,7 @@ function calculateResults() {
     let totalScore = 0;
     const catStats = {};
     
-    questions.forEach((q, idx) => {
+    state.shuffledQuestions.forEach((q, idx) => {
         const isCorrect = state.answers[idx] === q.answer;
         if (isCorrect) totalScore += q.points;
         
@@ -373,17 +458,81 @@ function calculateResults() {
 async function saveResultsToFirebase(results) {
     if (!db) return;
     try {
-        await db.collection("results").add({
+        await db.collection("results").doc(state.folio).set({
+            folio: state.folio,
             email: state.userEmail,
             survey: state.surveyData,
             score: results.totalScore,
             categories: results.finalCatScores,
             timeSeconds: state.secondsElapsed,
+            status: 'completed',
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
-        console.log("Success saving results!");
+        console.log("Success saving final results!");
     } catch (e) {
         console.error("Error saving to Firebase:", e);
+    }
+}
+
+async function syncProgressToFirebase() {
+    if (!db || !state.folio) return;
+    try {
+        await db.collection("results").doc(state.folio).set({
+            folio: state.folio,
+            email: state.userEmail,
+            survey: state.surveyData,
+            currentQuestionIndex: state.currentQuestionIndex,
+            answers: state.answers,
+            shuffledIndices: state.shuffledQuestions.map(q => questions.indexOf(q)),
+            secondsElapsed: state.secondsElapsed,
+            status: 'in-progress',
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+    } catch (e) {
+        console.warn("Silent failure syncing progress");
+    }
+}
+
+async function resumeQuizWithFolio(folioId) {
+    if (!db || !folioId) return;
+    try {
+        const doc = await db.collection("results").doc(folioId).get();
+        if (doc.exists) {
+            const data = doc.data();
+            if (data.status === 'completed') {
+                alert(state.language === 'en' ? 'This test is already completed.' : 'Este test ya ha sido completado.');
+                return;
+            }
+            // Restore state
+            state.folio = data.folio;
+            state.userEmail = data.email;
+            state.surveyData = data.survey;
+            state.currentQuestionIndex = data.currentQuestionIndex || 0;
+            state.answers = data.answers || new Array(questions.length).fill(null);
+            state.secondsElapsed = data.secondsElapsed || 0;
+            
+            // Reconstruct shuffled questions
+            if (data.shuffledIndices) {
+                state.shuffledQuestions = data.shuffledIndices.map(idx => questions[idx]);
+            } else {
+                state.shuffledQuestions = [...questions];
+            }
+
+            // Sync UI inputs just in case
+            elements.userEmail.value = state.userEmail;
+            elements.firstName.value = state.surveyData.firstName;
+            elements.lastName.value = state.surveyData.lastName;
+            elements.ageInput.value = state.surveyData.age;
+            elements.schoolSelect.value = state.surveyData.school;
+
+            switchScreen('quiz');
+            startTimer();
+            loadQuestion();
+        } else {
+            alert(translations[state.language].invalid_folio);
+        }
+    } catch (e) {
+        console.error("Error resuming:", e);
     }
 }
 
@@ -402,7 +551,10 @@ function animateValue(obj, start, end, duration) {
 function resetQuiz() {
     state.currentQuestionIndex = 0;
     state.answers = new Array(questions.length).fill(null);
+    state.shuffledQuestions = [];
     state.secondsElapsed = 0;
+    state.folio = '';
+    clearInterval(state.questionTimerInterval);
     
     // Clear survey data
     Object.keys(state.surveyData).forEach(key => {

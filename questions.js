@@ -1068,28 +1068,6 @@ const questions = [
         ],
         answer: 1,
         points: 1
-    },
-    {
-        category: "Tecnología e Innovación",
-        question: "¿Qué es un 'Smartwatch'?",
-        options: [
-            "Un reloj inteligente que se conecta a tu teléfono.",
-            "Un tipo de televisión miniatura.",
-            "Un control remoto para el clima."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "¿Cuál es el principal gas que inhalamos para vivir?",
-        options: [
-            "Oxígeno",
-            "Dióxido de carbono",
-            "Nitrógeno"
-        ],
-        answer: 0,
-        points: 1
     }
 ];
 
