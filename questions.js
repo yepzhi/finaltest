@@ -849,6 +849,226 @@ const questions = [
         answer: 1,
         points: 1
     }
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué significa la 'G' en la tecnología 5G?",
+        options: [
+            "Gigabytes",
+            "Generación",
+            "Global"
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Para qué sirve un código QR?",
+        options: [
+            "Para pagar impuestos automáticamente.",
+            "Es un código de respuesta rápida para acceder a información.",
+            "Es un tipo de batería nueva."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué tecnología permite que tu teléfono sepa exactamente dónde estás en un mapa?",
+        options: [
+            "GPS",
+            "Bluetooth",
+            "Wi-Fi"
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Ingeniería de Hardware",
+        question: "¿Cuál de estos componentes es considerado el 'cerebro' de una computadora?",
+        options: [
+            "El Monitor",
+            "El Teclado",
+            "El Procesador (CPU)"
+        ],
+        answer: 2,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué significa que un dispositivo tenga Wi-Fi?",
+        options: [
+            "Que puede conectarse a internet sin cables.",
+            "Que tiene mucha batería.",
+            "Que puede tomar fotos bajo el agua."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Código para Principiantes",
+        question: "En programación, ¿qué es un 'Bucle' (Loop)?",
+        options: [
+            "Un error que borra todo.",
+            "Una instrucción que se repite varias veces.",
+            "Un cable que conecta el mouse."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Código para Principiantes",
+        question: "¿Qué es una 'Variable' en un programa?",
+        options: [
+            "Un nombre que guarda un valor (como un número o texto).",
+            "Un tipo de pantalla flexible.",
+            "El botón de encendido."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué tecnología usas para conectar audífonos inalámbricos a corta distancia?",
+        options: [
+            "Bluetooth",
+            "Radio FM",
+            "Infrarrojo"
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Ingeniería de Hardware",
+        question: "¿Cómo se llama la interfaz que te permite usar una computadora tocando la pantalla directamente?",
+        options: [
+            "Pantalla Táctil",
+            "Scanner",
+            "Impresora"
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Código para Principiantes",
+        question: "¿Qué lenguaje de programación es famoso por tener una serpiente en su logo?",
+        options: [
+            "Java",
+            "Python",
+            "C++"
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "Cuando un programa tiene un error, ¿cómo le dicen comúnmente en el mundo tecnológico?",
+        options: [
+            "Glue",
+            "Bug",
+            "Stone"
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Ingeniería de Hardware",
+        question: "¿Qué aparato envía la señal de internet a toda tu casa?",
+        options: [
+            "Router",
+            "Monitor",
+            "Caja de luz"
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Código para Principiantes",
+        question: "¿Qué es 'Scratch'?",
+        options: [
+            "Una marca de computadoras.",
+            "Un lenguaje de programación por bloques para aprender jugando.",
+            "Un programa para limpiar el teclado."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿A qué se refieren cuando dicen que tus fotos están en 'La Nube'?",
+        options: [
+            "A que están guardadas en servidores en internet.",
+            "A que se suben al cielo físicamente.",
+            "A que están impresas en papel especial."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Futuro del Trabajo",
+        question: "¿Qué hace principalmente un Científico de Datos?",
+        options: [
+            "Arregla cables de internet.",
+            "Analiza mucha información para encontrar patrones y soluciones.",
+            "Dibuja los logos de las empresas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué es una 'App'?",
+        options: [
+            "Es una abreviatura de Aplicación (un programa para celular o PC).",
+            "Un tipo de comida para astronautas.",
+            "Un botón secreto del teclado."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué significa USB?",
+        options: [
+            "United States Battery",
+            "Universal Serial Bus (un estándar para conectar dispositivos).",
+            "Ultra Speed Box"
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Cómo se llama la tecnología que te pone unos lentes y te hace ver un mundo digital?",
+        options: [
+            "Realidad Virtual (VR)",
+            "Cine 4D",
+            "Televisión LED"
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Pensamiento Computacional",
+        question: "¿Qué es un 'Algoritmo'?",
+        options: [
+            "Una medicina para la vista.",
+            "Una serie de pasos para completar una tarea o resolver un problema.",
+            "Un tipo de música electrónica."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Tecnología Básica",
+        question: "¿Qué significa estar 'Online'?",
+        options: [
+            "Estar fuera de línea.",
+            "Estar conectado a la red.",
+            "Estar en una fila esperando."
+        ],
+        answer: 1,
+        points: 1
+    }
 ];
 
 export default questions;

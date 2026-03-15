@@ -33,6 +33,62 @@ body {
     max-width: 1200px;
     padding: 20px;
     z-index: 10;
+    position: relative;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.lang-toggle {
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: black;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.timer-display {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.timer-display .mono {
+    font-family: var(--font-mono);
+    color: var(--primary);
+    font-weight: bold;
+    margin-left: 5px;
 }
 
 .screen {

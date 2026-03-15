@@ -1,4 +1,5 @@
 import questions from './questions.js';
+import translations from './translations.js';
 
 // Application State
 const state = {
@@ -6,7 +7,10 @@ const state = {
     answers: new Array(questions.length).fill(null),
     userEmail: '',
     startTime: null,
-    endTime: null
+    endTime: null,
+    language: 'es',
+    timerInterval: null,
+    secondsElapsed: 0
 };
 
 // DOM Elements
@@ -28,9 +32,11 @@ const elements = {
     nextBtn: document.getElementById('nextBtn'),
     categoryBadge: document.getElementById('categoryBadge'),
     finalScore: document.getElementById('finalScore'),
-    levelLabel: document.getElementById('levelLabel'),
     categoryResults: document.getElementById('categoryResults'),
-    retryBtn: document.getElementById('retryBtn')
+    retryBtn: document.getElementById('retryBtn'),
+    timeVal: document.getElementById('timeVal'),
+    timerDisplay: document.getElementById('timerDisplay'),
+    langBtns: document.querySelectorAll('.lang-btn')
 };
 
 // Initialization
@@ -41,13 +47,78 @@ function init() {
     elements.prevBtn.addEventListener('click', showPrevious);
     elements.nextBtn.addEventListener('click', showNext);
     elements.retryBtn.addEventListener('click', resetQuiz);
+
+    elements.langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            setLanguage(btn.dataset.lang);
+        });
+    });
+
+    // Detect browser language or default to ES
+    const browserLang = navigator.language.split('-')[0];
+    if (translations[browserLang]) setLanguage(browserLang);
+    else setLanguage('es');
+}
+
+// Language Logic
+function setLanguage(lang) {
+    state.language = lang;
+    
+    // Update active button UI
+    elements.langBtns.forEach(btn => {
+        if (btn.dataset.lang === lang) btn.classList.add('active');
+        else btn.classList.remove('active');
+    });
+
+    // Translate static elements
+    const translatables = document.querySelectorAll('[data-i18n]');
+    translatables.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Translate placeholders
+    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    placeholders.forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+
+    // If quiz is running, reload question text
+    if (screens.quiz.classList.contains('active')) {
+        loadQuestion();
+    }
+}
+
+// Timer Logic
+function startTimer() {
+    state.secondsElapsed = 0;
+    elements.timerDisplay.style.display = 'block';
+    state.timerInterval = setInterval(() => {
+        state.secondsElapsed++;
+        updateTimeDisplay();
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(state.timerInterval);
+}
+
+function updateTimeDisplay() {
+    const mins = Math.floor(state.secondsElapsed / 60);
+    const secs = state.secondsElapsed % 60;
+    elements.timeVal.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
 // Navigation
 function startQuiz() {
     const email = elements.userEmail.value.trim();
     if (!email || !email.includes('@')) {
-        alert('Por favor, introduce un correo electrónico válido para continuar.');
+        alert(state.language === 'en' ? 'Please enter a valid email to continue.' : 'Por favor, introduce un correo electrónico válido.');
         return;
     }
     
@@ -55,6 +126,7 @@ function startQuiz() {
     state.startTime = new Date();
     
     switchScreen('quiz');
+    startTimer();
     loadQuestion();
 }
 
@@ -95,7 +167,7 @@ function loadQuestion() {
     
     // Buttons state
     elements.prevBtn.disabled = state.currentQuestionIndex === 0;
-    elements.nextBtn.textContent = state.currentQuestionIndex === questions.length - 1 ? 'Finalizar' : 'Siguiente';
+    elements.nextBtn.innerHTML = state.currentQuestionIndex === questions.length - 1 ? translations[state.language].btn_finish : translations[state.language].btn_next;
     elements.nextBtn.disabled = state.answers[state.currentQuestionIndex] === null;
 }
 
@@ -130,6 +202,7 @@ function showNext() {
 
 function finishQuiz() {
     state.endTime = new Date();
+    stopTimer();
     calculateResults();
     switchScreen('results');
 }
@@ -151,15 +224,6 @@ function calculateResults() {
     
     // Update Score UI
     animateValue(elements.finalScore, 0, totalScore, 1000);
-    
-    // Determine Level
-    const percentage = (totalScore / questions.length) * 100;
-    let rank = '';
-    if (percentage >= 90) rank = 'Nivel Maestría STEM';
-    else if (percentage >= 75) rank = 'Nivel Avanzado';
-    else if (percentage >= 50) rank = 'Nivel Competente';
-    else rank = 'Nivel Inicial / Curiosidad';
-    elements.levelLabel.textContent = rank;
     
     // Render Category Breakdown
     elements.categoryResults.innerHTML = '';
@@ -202,6 +266,7 @@ function resetQuiz() {
     state.currentQuestionIndex = 0;
     state.answers = new Array(questions.length).fill(null);
     elements.userEmail.value = '';
+    elements.timerDisplay.style.display = 'none';
     switchScreen('welcome');
 }
 

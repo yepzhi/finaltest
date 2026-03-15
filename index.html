@@ -11,42 +11,54 @@
 </head>
 <body>
     <div id="app">
+        <!-- Persistent UI Controls -->
+        <div class="top-bar">
+            <div id="languageToggle" class="lang-toggle">
+                <button class="lang-btn active" data-lang="es">🇪🇸 ES</button>
+                <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang="cn">🇹🇼 CN</button>
+            </div>
+            <div id="timerDisplay" class="timer-display" style="display: none;">
+                <span data-i18n="time_elapsed">Tiempo:</span> <span id="timeVal" class="mono">00:00</span>
+            </div>
+        </div>
+
         <!-- Welcome Screen -->
         <section id="welcome" class="screen active">
             <div class="glass-card main-card">
                 <div class="header">
-                    <div class="badge">NextGEN Diagnostic</div>
-                    <h1>SIIP NextGEN <span class="highlight">STEM Test</span></h1>
-                    <p class="subtitle">Evaluación de competencias científicas basada en estándares internacionales PISA.</p>
+                    <div class="badge" data-i18n="completed">NextGEN Diagnostic</div>
+                    <h1 data-i18n="welcome_title">SIIP NextGEN <span class="highlight">STEM Test</span></h1>
+                    <p class="subtitle" data-i18n="welcome_subtitle">Evaluación de competencias científicas basada en estándares internacionales PISA.</p>
                 </div>
                 
                 <div class="intro-stats">
                     <div class="stat-item">
-                        <span class="stat-val">80</span>
-                        <span class="stat-label">Puntos Totales</span>
+                        <span class="stat-val">100</span>
+                        <span class="stat-label" data-i18n="total_points">Puntos Totales</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-val">75+</span>
-                        <span class="stat-label">Preguntas</span>
+                        <span class="stat-val">95+</span>
+                        <span class="stat-label" data-i18n="questions_count">Preguntas</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-val">PISA</span>
-                        <span class="stat-label">Estándar</span>
+                        <span class="stat-label" data-i18n="standard_label">Estándar</span>
                     </div>
                 </div>
 
                 <div class="user-info">
-                    <input type="email" id="userEmail" placeholder="Introduce tu correo electrónico para comenzar" required>
+                    <input type="email" id="userEmail" placeholder="Introduce tu correo electrónico para comenzar" data-i18n-placeholder="email_placeholder" required>
                 </div>
 
                 <div class="pisa-badge">
                     <img src="https://www.oecd.org/pisa/pisa-logo.png" alt="PISA" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/OECD_logo.svg/2560px-OECD_logo.svg.png'; this.style.height='20px';">
-                    <span>Validado bajo Estándares PISA de Alfabetización Científica</span>
+                    <span data-i18n="pisa_text">Validado bajo Estándares PISA de Alfabetización Científica</span>
                 </div>
 
-                <button id="startBtn" class="btn btn-primary">Iniciar Diagnóstico</button>
+                <button id="startBtn" class="btn btn-primary" data-i18n="btn_start">Iniciar Diagnóstico</button>
                 
-                <p class="footnote">Este diagnóstico evalúa capacidades de explicación de fenómenos, evaluación de indagación e interpretación de datos científicos.</p>
+                <p class="footnote" data-i18n="footnote">Este diagnóstico evalúa capacidades de explicación de fenómenos, evaluación de indagación e interpretación de datos científicos.</p>
             </div>
         </section>
 
@@ -57,12 +69,12 @@
                     <div id="progressBar" class="progress-bar-fill"></div>
                 </div>
                 <div class="progress-text">
-                    <span id="currentQuestionNum">1</span> / <span id="totalQuestionsNum">80</span>
+                    <span id="currentQuestionNum">1</span> / <span id="totalQuestionsNum">100</span>
                 </div>
             </div>
 
             <div class="glass-card quiz-card">
-                <div id="categoryBadge" class="badge">Categoría</div>
+                <div id="categoryBadge" class="badge" data-i18n="cat_badge">Categoría</div>
                 <h2 id="questionText">¿Pregunta?</h2>
                 
                 <div id="optionsContainer" class="options-grid">
@@ -70,8 +82,8 @@
                 </div>
 
                 <div class="quiz-footer">
-                    <button id="prevBtn" class="btn btn-secondary" disabled>Anterior</button>
-                    <button id="nextBtn" class="btn btn-primary" disabled>Siguiente</button>
+                    <button id="prevBtn" class="btn btn-secondary" data-i18n="btn_prev" disabled>Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary" data-i18n="btn_next" disabled>Siguiente</button>
                 </div>
             </div>
         </section>
@@ -79,22 +91,21 @@
         <!-- Results Screen -->
         <section id="results" class="screen">
             <div class="glass-card results-card">
-                <div class="badge">Diagnóstico Completado</div>
-                <h1>Tu Nivel de <span class="highlight">Competencia STEM</span></h1>
+                <div class="badge" data-i18n="completed">Diagnóstico Completado</div>
+                <h1 data-i18n="current_level">Tu Nivel de <span class="highlight">Competencia STEM</span></h1>
                 
                 <div class="score-display">
                     <div class="score-circle">
                         <span id="finalScore">0</span>
-                        <span class="score-total">/ 80</span>
+                        <span class="score-total">/ 100</span>
                     </div>
-                    <h2 id="levelLabel">Nivel Avanzado</h2>
                 </div>
 
                 <div id="categoryResults" class="category-breakdown">
                     <!-- Category bars injected here -->
                 </div>
 
-                <button id="retryBtn" class="btn btn-secondary">Reiniciar Test</button>
+                <button id="retryBtn" class="btn btn-secondary" data-i18n="btn_retry">Reiniciar Test</button>
             </div>
         </section>
     </div>
