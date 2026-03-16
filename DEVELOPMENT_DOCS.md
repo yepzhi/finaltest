@@ -3,52 +3,69 @@
 This document serves as a comprehensive reference for the implementation, rules, and logic of the STEM Diagnostic Test project. It is designed to provide context for future AI agents or developers analyzing this codebase.
 
 ## 📌 Project Overview
-- **Goal**: A premium, interactive STEM diagnostic test (100 questions) based on PISA standards for "Scientific Literacy".
-- **Target Audience**: Students being assessed in STEM competencies.
+- **Goal**: A premium, interactive STEM diagnostic test with **exactly 100 questions**.
+- **Standard**: Based on PISA 2025 "Scientific Literacy" framework.
 - **Project Root**: `/Users/yepz/entrytest`
+- **Target Audience**: Students in STEM preparatory programs.
 
 ## 🛠️ Technical Stack
 - **Frontend**: Vanilla HTML5, CSS3 (Glassmorphism design), and JavaScript (ES Modules).
 - **Backend (Database)**: Firebase Firestore (Compat SDK) for storing survey data and test results.
-- **Deployment**: Integrated with GitHub for version control.
+- **Admin**: Discreet access via a hidden dot button with password protection.
+- **Deployment**: Automatic push to GitHub (`yepzhi/entrytest`).
+
+## 📜 Development History & Request Log
+Below is the chronological history of requirements requested by the user during development:
+
+1.  **Survey Enhancement**: Added specific family-related STEM questions:
+    -   "¿Tus papas te hablan de tecnologia de vez en cuando o de ciencias?"
+    -   "¿Hay ingenieros o cientificos en la familia?"
+    -   "¿Sientes admiracion por ellos?"
+2.  **Admin Panel**:
+    -   Discreet access button with password: `JStem14`.
+    -   Visual list of massive results with score per category and student name.
+    -   Export functionality to **Excel**.
+    -   Cloud integration via **Firebase**.
+3.  **UI/UX Fixes**:
+    -   Persistent language selector (ES, EN, CN).
+    -   Resolved "Infinite Loading Loop" caused by recursive logo errors.
+    -   Fixed scrolling issues on the student profile survey.
+    -   Fixed "Begin Test" button and state clearing.
+4.  **Security & Anti-Cheat**:
+    -   **Exactly 100 Questions**: Expanded from 80 to exactly 100 to cover more depth in AI, Coding, and Engineering.
+    -   **Per-Question Timer**: 30-second limit per question to deter external AI assistance.
+    -   **Question Shuffling**: Random order for every new attempt.
+5.  **Folio & Resumption (v1.5)**:
+    -   Generation of a unique tracking Folio (**`JSTEM-XXXXX`**).
+    -   **Resume with Folio**: Users can resume a test if interrupted by entering their Folio ID.
+    -   **Firebase Progress Sync**: State (answers, indices, time) is saved to Firestore after every question transition.
+    -   **Spanish Default**: Hardcoded Spanish as the default language.
+    -   **Confirmation Screen**: Displays the folio and a simulated email confirmation.
 
 ## ⚙️ Core Logic & Implementation Rules
 
-### 1. Question Bank Logic
-- **Fixed Count**: The test must contain exactly **100 questions**.
-- **Data Source**: Questions are stored as a JSON-like array in `questions.js`.
-- **Shuffling (Rotative Questions)**: Every new session generates a shuffled version of the question bank (`shuffleArray` in `main.js`). This ensures that no two test attempts follow the same order.
+### 1. Question Bank (`questions.js`)
+- **Capacity**: Must always maintain **100 questions**. 
+- **Structure**: Objects with `category`, `question`, `options` (array), `answer` (index), and `points`.
+- **Shuffling**: `state.shuffledQuestions` is generated at the start of chaque session via the Fisher-Yates algorithm.
 
-### 2. Folio & Resumption System
-- **Folio Generation**: Each attempt generates a unique ID in the format **`JSTEM-XXXXX`** (using uppercase letters and numbers, excluding ambiguous characters).
-- **Persistence**: 
-    - Progress (answers, elapsed time, shuffled order) is synced to Firebase Firestore after every question.
-    - Status is marked as `'in-progress'` until completion.
-- **Resume Feature**: On the landing page, users can enter their Folio ID to resume from the last saved question with their specific shuffled order and accumulated time intact.
+### 2. Authentication & Admin (`admin.html`)
+- **Admin Access**: Bottom-right dot button (`.admin-dot-btn`).
+- **Session Auth**: Stores `adminAuth: 'true'` in `sessionStorage` after successful login.
 
-### 3. Anti-Cheat & Timing
-- **Total Timer**: Tracks the total duration of the test attempt.
-- **Per-Question Timer**: A **30-second countdown** is implemented for each question.
-- **Auto-Advance**: If the 30-second timer reaches zero, the current question is marked as skipped (index -1), and the application auto-advances to the next question.
+### 3. Timing Mechanism
+- **Total Time**: `state.secondsElapsed` increments every second globally.
+- **Question Timer**: `state.questionSecondsRemaining` starts at 30 for each question.
+- **Timeout Logic**: At zero, the response is marked as `-1` (timeout) and `showNext()` is triggered automatically.
 
-### 4. Internationalization (i18n)
-- **Supported Languages**: Spanish (🇲🇽 ES), English (🇺🇸 EN), and Chinese (🇨🇳 CN).
-- **Default Language**: **Spanish (ES)** is the hardcoded default on initialization, regardless of browser settings.
-- **Dynamic Translation**: UI strings, question categories, and placeholders are managed via `translations.js`.
+### 4. Internationalization (`translations.js`)
+- **Mapping**: The `categoryMap` in `main.js` translates raw categories from `questions.js` into i18n keys for UI display.
+- **UI Elements**: All translatable elements use the `data-i18n` attribute.
 
-### 5. Admin & Results Management
-- **Discreet Access**: Hidden entry point via a small dot button in the bottom-right corner of the footer.
-- **Password Protection**: Access to `admin.html` is gated by the password **`JStem14`**.
-- **Massive Results View**: The Admin Panel fetches all entries from Firebase, calculating scores and category performance on the fly.
-- **Export**: Built-in support for exporting the results table to **Excel (.xlsx)** for mass data analysis.
-
-## 📂 File Structure
-- `index.html`: Main application shell (Welcome, Survey, Quiz, Results).
-- `styles.css`: Custom Design System (Dark mode, glassmorphism, responsive utilities).
-- `main.js`: Core state management and Firebase synchronization logic.
-- `questions.js`: Centralized question repository (100 items).
-- `translations.js`: All localized strings and category mappings.
-- `admin.html`: Administrative interface for results management.
+### 5. Data Schema (Firebase)
+- **Collection**: `results`
+- **Document ID**: Folio ID (`JSTEM-XXXXX`).
+- **Fields**: `email`, `survey` (object), `currentQuestionIndex`, `answers` (array of indices), `shuffledIndices`, `secondsElapsed`, `status` (`'in-progress'` or `'completed'`), `score`, `timestamp`.
 
 ---
 *Created on 2026-03-15 by Antigravity AI for yepzhi.*
