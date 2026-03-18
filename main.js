@@ -81,7 +81,8 @@ const elements = {
     progressBar: document.getElementById('progressBar'),
     currentQuestionNum: document.getElementById('currentQuestionNum'),
     totalQuestionsNum: document.getElementById('totalQuestionsNum'),
-    prevBtn: document.getElementById('prevBtn'),
+    startQuizBtn: document.getElementById('startQuizBtn'),
+    folioDisplayNumber: document.getElementById('folioDisplayNumber'),
     nextBtn: document.getElementById('nextBtn'),
     categoryBadge: document.getElementById('categoryBadge'),
     finalScore: document.getElementById('finalScore'),
@@ -109,9 +110,9 @@ function init() {
     elements.totalQuestionsNum.textContent = questions.length;
     
     elements.startBtn.addEventListener('click', goToSurvey);
-    elements.beginTestBtn.addEventListener('click', startQuiz);
+    elements.beginTestBtn.addEventListener('click', showInstructionsScreen);
+    elements.startQuizBtn.addEventListener('click', startQuiz);
     elements.resumeBtn.addEventListener('click', () => resumeQuizWithFolio(elements.resumeFolio.value.trim()));
-    elements.prevBtn.addEventListener('click', showPrevious);
     elements.nextBtn.addEventListener('click', showNext);
     elements.retryBtn.addEventListener('click', resetQuiz);
 
@@ -218,7 +219,7 @@ function goToSurvey() {
     switchScreen('survey');
 }
 
-function startQuiz() {
+function showInstructionsScreen() {
     state.surveyData.firstName = elements.firstName.value.trim();
     state.surveyData.lastName = elements.lastName.value.trim();
     state.surveyData.school = elements.schoolSelect.value;
@@ -234,6 +235,11 @@ function startQuiz() {
         state.shuffledQuestions = shuffleArray([...questions]);
     }
 
+    elements.folioDisplayNumber.textContent = 'FOLIO: ' + state.folio;
+    switchScreen('instructions');
+}
+
+function startQuiz() {
     state.startTime = new Date();
     switchScreen('quiz');
     startTimer();
@@ -300,8 +306,14 @@ function loadQuestion() {
     elements.progressBar.style.width = `${progress}%`;
     
     elements.optionsContainer.innerHTML = '';
-    const labels = ['A', 'B', 'C', 'D'];
-    question.options.forEach((opt, idx) => {
+    const allOptions = [...question.options];
+    
+    // Dynamic "No Sé" option
+    const noSeOpt = state.language === 'en' ? "I don't know" : (state.language === 'cn' ? '我不知道' : 'No sé / Desconozco la respuesta');
+    allOptions.push(noSeOpt);
+
+    const labels = ['A', 'B', 'C', 'D', 'E'];
+    allOptions.forEach((opt, idx) => {
         const optionEl = document.createElement('div');
         optionEl.className = 'option';
         if (state.answers[state.currentQuestionIndex] === idx) optionEl.classList.add('selected');
@@ -315,7 +327,6 @@ function loadQuestion() {
         elements.optionsContainer.appendChild(optionEl);
     });
     
-    elements.prevBtn.disabled = state.currentQuestionIndex === 0;
     elements.nextBtn.innerHTML = state.currentQuestionIndex === state.shuffledQuestions.length - 1 ? translations[state.language].btn_finish : translations[state.language].btn_next;
     elements.nextBtn.disabled = state.answers[state.currentQuestionIndex] === null;
 
@@ -324,7 +335,7 @@ function loadQuestion() {
 
 function startQuestionTimer() {
     clearInterval(state.questionTimerInterval);
-    state.questionSecondsRemaining = 30; // 30 seconds per question
+    state.questionSecondsRemaining = 40; // 40 seconds per question
     updateQuestionTimerUI();
 
     state.questionTimerInterval = setInterval(() => {
@@ -370,12 +381,7 @@ function selectOption(index) {
     elements.nextBtn.disabled = false;
 }
 
-function showPrevious() {
-    if (state.currentQuestionIndex > 0) {
-        state.currentQuestionIndex--;
-        loadQuestion();
-    }
-}
+
 
 function showNext() {
     if (state.currentQuestionIndex < state.shuffledQuestions.length - 1) {

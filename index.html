@@ -166,7 +166,30 @@
                     </div>
                 </div>
 
-                <button id="beginTestBtn" class="btn btn-primary" data-i18n="btn_begin_test">Comenzar Test Ahora</button>
+                <button id="beginTestBtn" class="btn btn-primary" data-i18n="btn_begin_test">Continuar</button>
+            </div>
+        </section>
+
+        <!-- Instructions & Folio Screen -->
+        <section id="instructions" class="screen">
+            <div class="glass-card instructions-card">
+                <div class="badge" data-i18n="cat_badge">Comenzar</div>
+                <h2 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 20px;">Instrucciones del Test</h2>
+                
+                <div id="folioDisplayBox" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border: 1px solid var(--primary-dark); margin-bottom: 20px; text-align: center;">
+                    <p style="color: var(--primary); font-weight: 800; font-size: 1.4rem;" id="folioDisplayNumber">FOLIO: ---</p>
+                    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 5px;">Guarda este folio. Es tu identificador único.</p>
+                </div>
+
+                <ul style="text-align: left; opacity: 0.9; margin-bottom: 30px; line-height: 1.6; list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 15px;">⏱️ <strong>Tiempo Límite:</strong> Tendrás <strong>40 segundos</strong> por pregunta.</li>
+                    <li style="margin-bottom: 15px;">👤 <strong>Examen Individual:</strong> Resuélvelo por tu cuenta para tener un diagnóstico real.</li>
+                    <li style="margin-bottom: 15px;">🤫 <strong>Ambiente:</strong> Busca un lugar silencioso sin distracciones.</li>
+                    <li style="margin-bottom: 15px;">📶 <strong>Conexión:</strong> Asegúrate de tener buena conexión a Internet.</li>
+                    <li>🚫 <strong>Importante:</strong> No podrás retroceder para cambiar tus respuestas.</li>
+                </ul>
+
+                <button id="startQuizBtn" class="btn btn-primary">¡INICIAR TEST!</button>
             </div>
         </section>
 
@@ -190,7 +213,6 @@
                 </div>
 
                 <div class="quiz-footer">
-                    <button id="prevBtn" class="btn btn-secondary" data-i18n="btn_prev" disabled>Anterior</button>
                     <button id="nextBtn" class="btn btn-primary" data-i18n="btn_next" disabled>Siguiente</button>
                 </div>
             </div>
