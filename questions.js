@@ -1,6 +1,9 @@
 const questions = [
+    // ============================================================
+    // INTRODUCCIÓN / STEM  (Q1–Q12)  ~12 %
+    // ============================================================
     {
-        category: "Tecnología e Innovación",
+        category: "Introducción / STEM",
         question: "¿Qué representa el caso de un iPhone último modelo?",
         options: [
             "Es un teléfono celular y nada más.",
@@ -12,1194 +15,1221 @@ const questions = [
         points: 1
     },
     {
-        category: "Fundamentos STEM",
+        category: "Introducción / STEM",
         question: "¿Qué es STEM? (por sus siglas en inglés)",
         options: [
-            "Es Sociedad, Técnica, Economía y Matemáticas.",
-            "Es Ciencia, Tecnología, Ecología y Medición.",
-            "Es Ciencia, Tecnología, Ingeniería y Matemáticas.",
-            "Es Sistemas, Telecomunicaciones, Electrónica y Mecánica."
+            "Sociedad, Técnica, Economía y Matemáticas.",
+            "Ciencia, Tecnología, Ecología y Medición.",
+            "Ciencia, Tecnología, Ingeniería y Matemáticas.",
+            "Sistemas, Telecomunicaciones, Electrónica y Mecánica."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Fundamentos STEM",
+        category: "Introducción / STEM",
         question: "¿Qué relevancia tiene el modelo educativo STEM en nuestros días?",
         options: [
-            "Este enfoque es el único capaz de crear la base de todo avance tecnológico: la innovación.",
-            "Este enfoque es el único capaz de crear acabar con la violencia social.",
-            "Este enfoque es el único capaz eliminar las fronteras y la discriminación.",
-            "Este enfoque solo es útil para quienes quieren ser científicos profesionales."
+            "Es el enfoque capaz de crear la base de todo avance tecnológico: la innovación.",
+            "Solo es útil para quienes quieren ser científicos profesionales.",
+            "Es un modelo obsoleto reemplazado por la inteligencia artificial.",
+            "Únicamente sirve para estudiantes de universidades de primer mundo."
         ],
         answer: 0,
         points: 1
     },
     {
-        category: "Tecnología y Código",
+        category: "Introducción / STEM",
         question: "¿Cómo está ligada la tecnología con el código (lenguajes de programación)?",
         options: [
             "El código es el lenguaje que habla nuestra tecnología.",
             "El código es una clave que se usa para desbloquear nuestra tecnología.",
-            "El código es una ley universal que se usa en la tecnología.",
+            "El código es una ley universal que rige a toda la tecnología.",
             "El código es un idioma que solo hablan los robots."
         ],
         answer: 0,
         points: 1
     },
     {
-        category: "Ciencia y Sociedad",
-        question: "¿Cuáles son los desafíos de nuestra sociedad actual más retadores que la tecnología aplicada en la ciencia pura nos puede ayudar a vencer?",
+        category: "Introducción / STEM",
+        question: "¿Por qué es importante que los jóvenes se involucren en STEM?",
         options: [
-            "Tener procesadores más rápidos y eficientes y acelerar la transición a la electromóvilidad.",
-            "La sustentabilidad (ser sustentables) y el combate por el cambio climático.",
-            "Lograr computadoras cuánticas y lograr una fusión nuclear estable.",
-            "Crear redes sociales más entretenidas y videojuegos más realistas."
+            "Porque STEM garantiza obtener un salario alto inmediatamente.",
+            "Porque la innovación derivada de STEM impulsa el desarrollo económico y social.",
+            "Porque sin STEM no se puede acceder a redes sociales.",
+            "Porque STEM es obligatorio para graduarse de la preparatoria."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología y Código",
-        question: "¿Qué enunciado describe mejor la relación entre estos tres conceptos: Ciencia, Tecnología y Código?",
+        category: "Introducción / STEM",
+        question: "¿Qué organismo internacional evalúa la competencia científica de estudiantes de 15 años mediante pruebas estandarizadas?",
         options: [
-            "El código es el lenguaje de nuestra Ciencia y la Tecnología es el resultado de estas dos.",
-            "La tecnología es el lenguaje que habla nuestra ciencia y el código es una disciplina aparte.",
-            "La tecnología es el máximo exponente de la ciencia y el código es el medio que los une siendo así el lenguaje que habla la tecnología.",
-            "Las tres son disciplinas completamente independientes que no se relacionan entre sí."
+            "La UNESCO mediante el programa PIRLS.",
+            "La OCDE mediante el programa PISA.",
+            "La ONU mediante el programa STEM Global.",
+            "La OMS mediante el programa Health Literacy."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Introducción / STEM",
+        question: "Según el libro, ¿cuál es la base de los avances tecnológicos más importantes de hoy?",
+        options: [
+            "La creatividad artística y el diseño gráfico.",
+            "Las leyes y principios que ofrece la ciencia.",
+            "La producción industrial en masa.",
+            "La inversión de las grandes empresas tecnológicas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Introducción / STEM",
+        question: "¿Cuáles son los rubros principales que deben enfocarse para crear innovación según el enfoque STEM?",
+        options: [
+            "Ciencia, Tecnología, Ingeniería y Matemáticas.",
+            "Arte, Filosofía, Historia y Literatura.",
+            "Comercio, Finanzas, Economía y Política.",
+            "Deportes, Salud, Nutrición y Bienestar."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Introducción / STEM",
+        question: "¿Qué porcentaje del ADN comparten los seres humanos con los chimpancés?",
+        options: [
+            "Aproximadamente el 75%.",
+            "Aproximadamente el 85%.",
+            "Casi el 99%.",
+            "Exactamente el 100%."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Tecnología e Innovación",
-        question: "¿Que significa la última versión de un producto reconocido como un iPhone ó un Galaxy en términos de avance tecnológico?",
+        category: "Introducción / STEM",
+        question: "¿Qué se necesita para que un planeta alienígena tenga posibilidad de albergar vida?",
         options: [
-            "Es un dispositivo que lleva los conocimientos científicos y de ingeniería humana al límite.",
-            "Es una técnica que se usa para que se hagan los anteriores obsoletos más rápido.",
-            "Es la forma que usan las empresas para vender más, solo le cambian el nombre.",
-            "Es un producto idéntico al anterior pero con una carcasa diferente."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Tecnología e Innovación",
-        question: "¿Cuál es el principal reto de una nueva e innovadora tecnología en el mundo de la electrónica?",
-        options: [
-            "Hacer en un diseño atractivo visualmente sin importar el costo solo que sea confiable.",
-            "Hacerla comercialmente viable (abaratar su costo), fácil de usar y práctica para que sea adoptada por las masas.",
-            "Que sea compatible con las tecnologías actuales.",
-            "Que sea tan compleja que solo los expertos puedan usarla."
+            "Tener anillos como Saturno y una luna grande.",
+            "Elementos primarios (H, O, C, N) y estar en la zona habitable de su estrella.",
+            "Tener agua en estado sólido y una atmósfera de nitrógeno puro.",
+            "Estar lo más cerca posible de un agujero negro."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología e Innovación",
-        question: "¿Cuáles son los tres grupos ó clusters de innovación que demandarán fuerza laboral especializada en los próximos años?",
+        category: "Introducción / STEM",
+        question: "¿Qué es un estándar tecnológico?",
         options: [
-            "1, Cryptomonedas. 2.- Blockchain. 3, Programación y el código.",
-            "1, Robotíca, IA, Autonomía. 2.- Nanotecnología en fusión con Biotecnología. 3, Programación y el código.",
-            "1, Economía digital. 2.- Ciencia de Cohetes. 3, Ciencias médicas y protesis robóticas.",
-            "1, Redes sociales. 2.- Diseño gráfico. 3, Marketing digital."
+            "Un producto de marca registrada.",
+            "Una versión de software o hardware que regula la evolución de la tecnología.",
+            "Un precio fijo para los dispositivos electrónicos.",
+            "Una ley gubernamental que prohíbe ciertos dispositivos."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Futuro del Trabajo",
-        question: "¿Cuáles son algunas de las profesiones del futuro próximo según DaVinci Institute?",
+        category: "Introducción / STEM",
+        question: "¿Qué es IoT (Internet of Things)?",
         options: [
-            "Optimizador de tráfico de drones, Diseño de Viajes sin conductor, Gastrónomo Molecular.",
-            "Creación de arte digital por IA, Gestión de contabilidad autonóma, Gestión de energía de paneles solares.",
-            "Ingeniero de electrónica analógica, Diseño de Interiores asistido por IA, Terapeutas de mascotas.",
-            "Conductor de taxis, Cajero bancario, Operador de máquinas fotocopiadoras."
+            "Un nuevo tipo de procesador para computadoras.",
+            "La integración de cosas cotidianas al internet para información y productividad.",
+            "Un lenguaje de programación para robots.",
+            "Un sistema de seguridad exclusivo para empresas."
         ],
-        answer: 0,
+        answer: 1,
+        points: 1
+    },
+
+    // ============================================================
+    // CAPÍTULO 1 — CIENCIA  (Q13–Q45)  ~33 %
+    // ============================================================
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué sucedió en el Big Bang según la cosmología moderna?",
+        options: [
+            "Un meteorito gigante chocó con la Tierra.",
+            "Todo el espacio, tiempo, materia y energía surgieron de un solo evento.",
+            "Dos galaxias colisionaron y formaron el universo.",
+            "El Sol explotó y creó todos los planetas."
+        ],
+        answer: 1,
         points: 1
     },
     {
-        category: "Tecnología y Sociedad",
-        question: "¿Qué empresas puedes identificar que hacen que los avances tecnológicos más avanzados estén disponibles prácticamente para todos en el mundo?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Hace aproximadamente cuántos años ocurrió el Big Bang?",
         options: [
-            "Coca Cola, Wal Mart, FedEx.",
-            "Amazon, AliExpress, Ebay.",
-            "Apple, Tesla, Pfizer.",
-            "McDonald's, Nike, Starbucks."
+            "4,500 millones de años.",
+            "10,000 millones de años.",
+            "13,800 millones de años.",
+            "20,000 millones de años."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Estándares Tecnológicos",
-        question: "¿Para qué se usan los estándares ó protocolos tecnológicos en esta industría?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es el espacio-tiempo según la teoría de Einstein?",
         options: [
-            "Así todas las empresas tecnológicas se ponen de acuerdo para que los productos se entiendan entre sí.",
-            "Son reglas que ponen los gobiernos para que todas las empresas las sigan.",
-            "Son clave para que no existan disputas legales entre las empresas.",
-            "Son normas de seguridad para proteger a los usuarios de productos defectuosos."
+            "Es un modelo que une las tres dimensiones del espacio con el tiempo como una cuarta dimensión.",
+            "Es la distancia entre la Tierra y el Sol medida en horas luz.",
+            "Es un tipo de materia oscura que llena el universo.",
+            "Es la velocidad a la que se desplaza la luz en el vacío."
         ],
         answer: 0,
         points: 1
     },
     {
-        category: "Estándares Tecnológicos",
-        question: "¿Conforme salen y se adoptan nuevas tecnologías sobre la tecnología actual, que pasa con los estándares tecnológicos que están vigentes?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué efecto tiene la gravedad sobre el espacio-tiempo?",
         options: [
-            "Se adoptan, después todo producto nuevo trae los estándares nuevos, así se fabrican las cosas con lo más nuevo.",
-            "\"Suben\" ó cambian a una nueva versión ó generación.",
-            "Se eliminan completamente y se crean unos nuevos desde cero.",
-            "Permanecen exactamente iguales sin importar los cambios tecnológicos."
-        ],
-        answer: 1,
-        points: 1
-    },
-    {
-        category: "Educación STEM",
-        question: "¿Qué enunciado es el más correcto para poder crear innovación a nivel país?",
-        options: [
-            "Integrar desarrollo de habilidades sociales en las escuelas y del medio ambiente.",
-            "Integrar Ciencia y Tecnología en la educación media y media superior para elevar el número estudiantes en áreas STEM.",
-            "Integrar clases de robótica y matemática pura para elevar el coheficiente IQ de los alumnos.",
-            "Construir más laboratorios de investigación sin cambiar la educación actual."
-        ],
-        answer: 1,
-        points: 1
-    },
-    {
-        category: "Educación STEM",
-        question: "¿Qué ventaja tiene la educación STEM en modo divulgativo versus las clases de ciencias STEM regulares?",
-        options: [
-            "Sube la complejidad pero al final se lográ un mejor resultado teniendo alumnos más capaces de enfrentar al mundo.",
-            "La infomación es más fácil de entender y entretenida, además de ser temas selectos que causan mayor retención de la atención y el conocimiento.",
-            "No tiene ninguna ventaja significativa sobre la educación tradicional.",
-            "Solo funciona para alumnos que ya tienen conocimientos avanzados de ciencia."
-        ],
-        answer: 1,
-        points: 1
-    },
-    {
-        category: "Ciencia",
-        question: "¿Cómo difiere un principio y ley de la ciencia vs una hipótesis y/o teoría científica?",
-        options: [
-            "Los principios y leyes son las que siempre se respetan en el mundo natural.",
-            "Una hipótesis es la que siempre se respetan en el mundo natural.",
-            "Una teoría científica es la que siempre se respetan en el mundo natural.",
-            "No hay diferencia, todos estos términos significan exactamente lo mismo."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Qué es la teoría del Big Bang?.",
-        options: [
-            "Es la teoría de la formación del inicio de la vida en la Tierra.",
-            "Es la teoría de la formación del inicio de nuestro Sol.",
-            "Es la teoría de la formación del inicio de nuestro Universo.",
-            "Es la teoría que explica por qué las galaxias giran en espiral."
+            "Lo destruye por completo.",
+            "No tiene ningún efecto, la gravedad es solo una fuerza.",
+            "Lo curva; a mayor masa, mayor curvatura.",
+            "Lo expande uniformemente en todas direcciones."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Cosmología",
-        question: "La lógica nos dice una explosión tiende a desacelerar conforme pase el tiempo, según un descubrimiento hecho en 1929 por Edwin Hubble, el Universo...",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué establece la Ley de Gravitación Universal de Newton?",
         options: [
-            "Esta desacelerando",
-            "Esta acelerando",
-            "Esta inmóvil",
-            "Se está contrayendo hacia su centro"
+            "Que la gravedad solo existe dentro de la atmósfera terrestre.",
+            "Que a mayor masa hay más gravedad y a menor distancia hay mayor atracción.",
+            "Que la gravedad es una consecuencia de la carga eléctrica de los cuerpos.",
+            "Que los objetos más pequeños siempre orbitan a los más grandes."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física de Partículas",
-        question: "¿Qué es la ántimateria?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué son los átomos?",
         options: [
-             "Es matería oscura de la que está compuesta el 70% de la energía del Universo.",
-             "Es materia que tiene su carga eléctrica opuesta, como el positrón",
-             "Se le llama así a la energía pura antes de convertirse en materia",
-             "Es un tipo de material sintético creado en laboratorios para uso industrial."
+            "Son las unidades más pequeñas de información digital.",
+            "Son los bloques de construcción fundamentales de toda la materia.",
+            "Son partículas que solo existen en el Sol.",
+            "Son moléculas que forman el ADN exclusivamente."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Cosmología",
-        question: "¿Qué es el CBR (Cosmic Background Radiation) ó Radiación de Fondo Cósmico?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuáles son las tres partículas subatómicas principales de un átomo?",
         options: [
-            "Es el \"ruido\" remanente del Big Bang, que podemos detectar como microondas",
-            "Es la tela del espacio-tiempo de fondo en las estrellas",
-            "Es la luz en su conjunto que irradian todas las estrellas juntas",
-            "Es una frecuencia de radio utilizada para comunicarse con satélites."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astrofísica",
-        question: "¿Qué es la fusión termonuclear?",
-        options: [
-            "Es presionar átomos con presión y calor hasta que se unen y forman uno nuevo",
-            "Es dividir átomos con presión y calor hasta que se sepan en dos átomos individuales",
-            "Es el proceso de enfriar átomos hasta que se separan en sus componentes básicos.",
-            "Es una reacción química común que ocurre en cualquier combustión."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astrofísica",
-        question: "¿Qué es la secuencia principal?",
-        options: [
-            "Es un proceso basado en el método científico que usan las empresas para crear nueva tecnología",
-            "Se les llama así aprox. al 80% de las estrellas en el Universo porque son de un tamaño y brillo similar.",
-            "Es la forma en que se clasifican los planetas del Sistema Solar por su distancia al Sol.",
-            "Es el orden en que se descubrieron los elementos de la tabla periódica."
+            "Fotones, quarks y neutrinos.",
+            "Protones, neutrones y electrones.",
+            "Iones, isótopos y moléculas.",
+            "Bosones, fermiones y leptones."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Astrofísica",
-        question: "¿Qué es un disco de acreción?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué determina la identidad de un elemento químico?",
         options: [
-            "Se llamaba así a los discos en que se guardaba la información digital en las empresas de desarrollo tecnológico.",
-            "Es el aglutinamiento de material alrededor de una estrella derivado de estos discos se forman los planetas en un sistema planetario.",
-            "Es una tecnología novedosa de almacenamiento de datos, la siguiente generación después de los discos en estado sólido.",
-            "Es un instrumento óptico utilizado para observar estrellas desde la Tierra."
+            "El número de electrones en su capa exterior.",
+            "El número de protones en su núcleo (número atómico).",
+            "La cantidad de neutrones en su núcleo.",
+            "Su peso molecular y estado de la materia."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Qué es orbitar?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuáles son los cuatro elementos más abundantes en el universo?",
         options: [
-            "Es entrar en una caída infinita como los satélites naturales y artificiales",
-            "Es agitar en forma circular un objeto para obtener una mezcla uniforme",
-            "Es como se le llama al resultado de unir dos átomos mediante la fusión",
-            "Es el movimiento que hace un electrón dentro del núcleo de un átomo."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Ciencia",
-        question: "¿Para qué nos sirve la Datación Radiométrica de Isótopos?",
-        options: [
-            "Sirve para identificar si hay contaminación por radiación en una muestra",
-            "Sirve para saber desde hace cuantos años existe una muestra",
-            "Sirve para medir la temperatura interna de las rocas volcánicas.",
-            "Sirve para determinar la composición química del agua potable."
+            "Oro, Plata, Platino y Diamante.",
+            "Hidrógeno, Helio, Oxígeno y Carbono.",
+            "Hierro, Niquel, Cobre y Zinc.",
+            "Nitrógeno, Fósforo, Azufre y Cloro."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Biología",
-        question: "Por su habilidad de formar casi 10 millones de enlaces estables, ¿Cuál es el elemento más importante para la vida?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué son los isótopos?",
         options: [
-            "Carbono",
-            "Oxígeno",
-            "Nitrógeno",
-            "Hierro"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "De los millones de compuestos orgánicos que existen ¿Cuáles son los cuatro tipos principales?",
-        options: [
-            "Carbohidratos, Lípidos (grasas), Proteínas, Acidos Núcleicos (ADN).",
-            "Alcoholes, Cetonas, Polímeros, Sintéticos",
-            "Glucosa, Minerales, Vitaminas, Enzimas",
-            "Metales, No metales, Gases nobles, Metaloides"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "¿Qué es el ADN?",
-        options: [
-            "Significa Acido Desoxirribonucleico y contiene las instrucciones ó código genético de toda la vida orgánica",
-            "Significa Acido Dimetil-nitrogenado y contiene el código genetico humano y de los animales solamente.",
-            "Significa Adaptative Distance Nivelator, es un dispositivo que nivel la distancia entre dos objetos usando tecnología laser.",
-            "Significa Análisis de Datos Numéricos y es un método estadístico creado por Watson y Crick."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Ciencia y Medio Ambiente",
-        question: "¿Qué es el invierno nuclear?",
-        options: [
-            "Es el levantamiento de una enorme nube de polvo que no permite la entrada de luz solar provocando la muerte de todas las plantas en la tierra provocada por la explosión de una bomba atomica ó el impacto de un asteoride.",
-            "Es un temporal que se da cada mil años al invertirse la polaridad del núcleo de la tierra.",
-            "Es una estación especialmente fría que ocurre naturalmente cada 500 años.",
-            "Es el nombre que recibe el invierno en los países que tienen centrales nucleares cerca."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Hace cuanto tiempo se estima que sucedió lo que conocemos como Big Bang?",
-        options: [
-            "Hace 3 mil millones de años.",
-            "Hace casi 14 mil millones de años.",
-            "Hace casi 10 mil millones de años.",
-            "Hace 20 mil millones de años."
+            "Elementos que cambian de estado sólido a líquido.",
+            "Versiones de elementos con diferente número de neutrones, algunos son inestables y radiactivos.",
+            "Átomos que han perdido todos sus electrones.",
+            "Moléculas formadas por dos elementos diferentes."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Cosmología",
-        question: "¿Hace cuanto tiempo se estima que se formó el Sol y Sistema Solar?",
+        category: "Cap.1 — Ciencia",
+        question: "¿Cómo se forma una estrella?",
         options: [
-            "Hace 4,600 millones de años.",
-            "Hace 6,000 millones de años.",
-            "Hace 10,000 millones de años.",
-            "Hace 2,000 millones de años."
+            "Por la colisión de dos planetas gigantes.",
+            "Por la acumulación gravitacional de gas (principalmente hidrógeno) en nebulosas.",
+            "Por erupciones volcánicas en el espacio.",
+            "Por la explosión de agujeros negros."
         ],
-        answer: 0,
+        answer: 1,
         points: 1
     },
     {
-        category: "Historia Natural",
-        question: "¿Hace cuanto tiempo ocurrió la ultima extinción masiva provocada por un meteorito? Compara versus el total del tiempo desde que el Big Bang.",
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué proceso genera la energía en el interior de las estrellas?",
         options: [
-            "Hace sólo un 2% de la historia del Universo.",
-            "Hace sólo un 5% de la historia del Universo.",
-            "Hace sólo un 0.2% de la historia del Universo.",
-            "Hace un 15% de la historia del Universo."
+            "La combustión de oxígeno e hidrógeno.",
+            "La fusión nuclear, donde átomos de hidrógeno se fusionan para formar helio.",
+            "La fisión nuclear de elementos pesados como el uranio.",
+            "Las reacciones químicas entre gases de la nebulosa."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué sucede cuando una estrella masiva agota su combustible nuclear?",
+        options: [
+            "Se apaga lentamente sin ningún efecto notable.",
+            "Puede explotar como supernova, dejando una estrella de neutrones o un agujero negro.",
+            "Se convierte directamente en un planeta.",
+            "Se congela y se vuelve un cometa."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es el espectro electromagnético?",
+        options: [
+            "Un dispositivo para medir la temperatura de las estrellas.",
+            "El rango completo de todas las frecuencias de radiación electromagnética.",
+            "Solo la luz visible que nuestros ojos perciben.",
+            "Un tipo de energía exclusiva de los rayos X."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuál de las siguientes es radiación electromagnética NO ionizante (no dañina)?",
+        options: [
+            "Rayos Gamma.",
+            "Rayos X.",
+            "Ondas de radio.",
+            "Rayos ultravioleta."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Biología",
-        question: "¿Qué son los Euarchonta?",
+        category: "Cap.1 — Ciencia",
+        question: "¿La relación entre frecuencia y energía en una onda electromagnética es…?",
         options: [
-            "Son réptiles, ancestros de las aves modernas que vivieron hace unos 65 millones de años.",
-            "Es una tecnología que regula las redes inalambricas y su interacción con los humanos.",
-            "Son mamíferos a los que se les denomina los ancestros verdaderos que vivieron hace unos 65 millones de años.",
-            "Son fósiles de insectos gigantes encontrados en la era del Carbonífero."
+            "Inversa: a mayor frecuencia, menor energía.",
+            "Directa: a mayor frecuencia, mayor energía.",
+            "No existe relación entre frecuencia y energía.",
+            "Solo aplica para la luz visible, no para otras ondas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuáles son los tres estados clásicos de la materia?",
+        options: [
+            "Sólido, líquido y gaseoso.",
+            "Sólido, plasma y vacío.",
+            "Líquido, gaseoso y magnético.",
+            "Plasma, Bose-Einstein y superfluido."
+        ],
+        answer: 0,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuál es la velocidad de la luz en el vacío?",
+        options: [
+            "150,000 km/s.",
+            "300,000 km/s (aproximadamente).",
+            "500,000 km/s.",
+            "1,000,000 km/s."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué establece la famosa ecuación E = mc²?",
+        options: [
+            "Que la energía de un objeto depende de su velocidad al cuadrado.",
+            "Que la masa y la energía son equivalentes y pueden convertirse una en otra.",
+            "Que la luz viaja más rápido en el agua que en el vacío.",
+            "Que la energía se destruye cuando un objeto alcanza la velocidad de la luz."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es la energía oscura?",
+        options: [
+            "La energía que producen los agujeros negros al destruir materia.",
+            "Una fuerza misteriosa que provoca la expansión acelerada del universo (~70% del universo).",
+            "La energía producida por estrellas apagadas o muertas.",
+            "Un tipo de radiación gamma que no es visible."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué fue confirmado por Perlmutter, Schmidt y Riess (Premio Nobel 2011)?",
+        options: [
+            "La existencia del bosón de Higgs.",
+            "La existencia de los efectos de la energía oscura al observar supernovas distantes.",
+            "La composición exacta de la materia oscura.",
+            "La velocidad de la luz como límite universal."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es la materia oscura?",
+        options: [
+            "Materia que es oscura porque no refleja luz, como el carbón.",
+            "Materia que ejerce gravedad sobre la materia visible pero no puede ser detectada de otra manera.",
+            "Materia que existe solo dentro de los agujeros negros.",
+            "Un tipo de gas oscuro que llena el espacio entre galaxias."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es el bosón de Higgs, confirmado en 2012 por el CERN?",
+        options: [
+            "Una partícula que viaja más rápido que la luz.",
+            "La partícula que otorga masa a las demás partículas por medio del campo de Higgs.",
+            "Un tipo de átomo que forma la materia oscura.",
+            "El componente principal de los rayos gamma."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Cuáles son los cinco pasos básicos del método científico?",
+        options: [
+            "Imaginar, suponer, adivinar, leer y creer.",
+            "Observación, medición, experimentación, formulación de hipótesis, y análisis.",
+            "Copiar, pegar, buscar en internet, resumir y publicar.",
+            "Planificar, diseñar, construir, financiar y vender."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es una muestra de control en un experimento?",
+        options: [
+            "El grupo que recibe el tratamiento experimental principal.",
+            "Un grupo que se utiliza como referencia comparativa, sin aplicar la variable de prueba.",
+            "La cantidad mínima de participantes para que un experimento sea válido.",
+            "El instrumento de medición utilizado en el laboratorio."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "Según la Relatividad General, ¿qué es la gravedad?",
+        options: [
+            "Una fuerza magnética entre objetos cargados eléctricamente.",
+            "Una consecuencia de la curvatura del espacio-tiempo por la masa.",
+            "Una fuerza que solo actúa dentro de la atmósfera terrestre.",
+            "La repulsión entre partículas subatómicas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué problemas teóricos existen con la gravedad según el libro?",
+        options: [
+            "Sabemos exactamente cómo se produce la gravedad.",
+            "Sabemos cómo funciona pero no sabemos qué la origina.",
+            "La gravedad no existe, es solo una ilusión óptica.",
+            "La gravedad solo funciona a distancias menores a 100 metros."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "La Ley de Conservación de la Masa y la Energía establece que:",
+        options: [
+            "La masa y la energía se crean y destruyen constantemente.",
+            "La masa y la energía no se crean ni se destruyen, solo se transforman.",
+            "Solo la masa se conserva; la energía siempre se pierde.",
+            "La conservación solo aplica en el vacío del espacio."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué son las WIMPs mencionadas como posible composición de la materia oscura?",
+        options: [
+            "Partículas de luz visible de alta energía.",
+            "Partículas Masivas que Interactúan Débilmente (Weakly Interacting Massive Particles).",
+            "Ondas electromagnéticas de baja frecuencia.",
+            "Estrellas enanas blancas muy pequeñas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué observatorio espacial de la NASA identificó miles de millones de exoplanetas del tamaño de la Tierra?",
+        options: [
+            "El telescopio Hubble.",
+            "El satélite Kepler.",
+            "La Estación Espacial Internacional (ISS).",
+            "El radiotelescopio ALMA."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué son las constantes universales en física?",
+        options: [
+            "Valores numéricos que se inventan para cada experimento.",
+            "Valores fijos que no cambian y gobiernan las leyes de la física en todo el universo.",
+            "Temperaturas que mantienen estable la materia.",
+            "Ecuaciones que solo funcionan en la Tierra."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué es la dilatación del tiempo según la relatividad?",
+        options: [
+            "El tiempo corre igual en todos los marcos de referencia.",
+            "El tiempo puede transcurrir más lento o más rápido dependiendo de la velocidad o la gravedad.",
+            "El tiempo solo se detiene dentro de los agujeros negros.",
+            "Es un concepto artístico sin base científica."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.1 — Ciencia",
+        question: "¿Qué dijo Einstein cuando publicaron 'Cien autores en contra de Einstein'?",
+        options: [
+            "\"¡Tengo más enemigos que amigos!\"",
+            "\"¿Por qué cien? Si estuviera equivocado, bastaría con solo uno.\"",
+            "\"Cien no son suficientes, necesitarían millones.\"",
+            "\"No me importa la opinión de nadie.\""
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // ============================================================
+    // CAPÍTULO 2 — TECNOLOGÍA  (Q46–Q85)  ~40 %
+    // ============================================================
+
+    // --- 2.1 Tecnologías Inalámbricas ---
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Cuáles son las tres principales tecnologías de comunicación inalámbrica de corto alcance?",
+        options: [
+            "Satélite, radio FM y cable coaxial.",
+            "Red Celular, WiFi y Bluetooth.",
+            "Fibra óptica, Ethernet y USB.",
+            "NFC, infrarrojo y HDMI."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Cuál fue la primera generación de red celular (1G) y qué operador la desplegó en 1979?",
+        options: [
+            "AT&T en Nueva York, red digital GSM.",
+            "NTT en Tokio, red analógica AMPS.",
+            "Verizon en Los Angeles, red CDMA.",
+            "Telcel en Ciudad de México, red LTE."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Qué avance de seguridad trajo la segunda generación (2G/GSM)?",
+        options: [
+            "Permitió videollamadas encriptadas por primera vez.",
+            "Pasó de señales analógicas a digitales, permitiendo encriptar voz y datos.",
+            "Eliminó la necesidad de antenas físicas.",
+            "Introdujo la tecnología de fibra óptica en los celulares."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Qué velocidad teórica promete la tecnología 5G comparada con 4G LTE?",
+        options: [
+            "El doble de velocidad que 4G LTE.",
+            "5 veces más rápido que 4G LTE.",
+            "Hasta 50 veces las capacidades de 4G LTE.",
+            "La misma velocidad pero con menor latencia."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Qué es la Teoría General de la Relatividad?",
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Cuáles son los dos tipos de 5G?",
         options: [
-            "Es una teoría que describe como el espacio y el tiempo se curvan en presencia de gravedad.",
-            "Es una teoría que describe como la gravedad se curva con la velocidad de un objeto.",
-            "Es una teoría que describe como el tiempo es relativo a la conciencia de las personas.",
-            "Es una teoría que explica por qué la velocidad de la luz cambia según el observador."
+            "5G Basic y 5G Premium.",
+            "5G mmWave (ultra-rápido) y 5G sub-6GHz.",
+            "5G Indoor y 5G Outdoor.",
+            "5G Voice y 5G Data."
         ],
-        answer: 0,
+        answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "En física, ¿Qué significa 1G?",
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Qué organismo creó el estándar WiFi?",
         options: [
-            "Se refiere a la fuerza de atracción gravitatoria en la superficie del Sol.",
-            "Se refiere a los servicios de telefonía inalámbrica de primer generación.",
-            "Se refiere a la fuerza de atracción gravitatoria en la superficie de la tierra.",
-            "Se refiere a la velocidad de un gigabyte por segundo en redes de datos."
+            "La FCC (Federal Communications Commission).",
+            "El Wi-Fi Alliance, formado por 3Com, Nokia y otras empresas.",
+            "El IEEE exclusivamente sin ayuda de la industria.",
+            "Apple y Google de forma conjunta."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Qué es la paradoja de frecuencia-energía en las comunicaciones inalámbricas?",
+        options: [
+            "Las frecuencias más altas viajan más lejos porque tienen más energía.",
+            "Las frecuencias más altas tienen más energía pero en la atmósfera llegan menos lejos.",
+            "Todas las frecuencias llegan igual de lejos sin importar su energía.",
+            "Las frecuencias bajas son más rápidas que las altas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Tecnologías Inalámbricas",
+        question: "¿Qué característica principal tiene el Bluetooth frente a WiFi y Red Celular?",
+        options: [
+            "Mayor velocidad de transferencia de datos.",
+            "Mayor alcance de señal.",
+            "Menor consumo de energía, ideal para conexiones continuas.",
+            "Mayor capacidad de encriptación de datos."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Física",
-        question: "Al caer un rayo en la distancia en una tormenta, ¿Qué sucede con la luz y el sonido?",
+        category: "Cap.2 — Seguridad de Redes",
+        question: "¿Qué tipo de cifrado WiFi es considerado obsoleto y fácilmente hackeable?",
         options: [
-            "Escuchamos primero el ruido y luego vemos el rayo.",
-            "Escuchamos y vemos al mismo tiempo.",
-            "Vemos primero la luz y luego escuchamos el rayo.",
-            "No podemos percibir ni la luz ni el sonido a distancia."
+            "WPA3.",
+            "WPA2 con AES.",
+            "WEP (Wired Equivalent Privacy).",
+            "SSL/TLS."
+        ],
+        answer: 2,
+        points: 1
+    },
+
+    // --- 2.2 Pantallas ---
+    {
+        category: "Cap.2 — Pantallas",
+        question: "¿Cuál es la principal diferencia entre una pantalla OLED y una LCD?",
+        options: [
+            "OLED es más pesada que LCD.",
+            "OLED no requiere luz de fondo; cada píxel emite luz propia, logrando negros profundos.",
+            "LCD produce mejor contraste que OLED en todos los casos.",
+            "OLED solo muestra imágenes en blanco y negro."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Pantallas",
+        question: "¿Qué tecnología de pantalla es considerada obsoleta y usaba un haz de rayos catódicos?",
+        options: [
+            "LCD.",
+            "OLED.",
+            "CRT (Cathode Ray Tube).",
+            "MicroLED."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Se puede escuchar el sonido dentro de la estación espacial internacional?",
+        category: "Cap.2 — Pantallas",
+        question: "¿Qué significan las siglas RGB en tecnología de pantallas?",
         options: [
-            "No, porque no hay gravedad y no puede propagarse el sonido.",
-            "No, en el espacio no hay sonido.",
-            "Sí, porque dentro hay una atmósfera artificial y ahí si hay sonido.",
-            "Solo se puede escuchar si usan micrófonos especiales conectados a las paredes."
+            "Rapid Graphics Bandwidth.",
+            "Red, Green, Blue (Rojo, Verde, Azul).",
+            "Resolution, Gamma, Brightness.",
+            "Real Graphics Boost."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Pantallas",
+        question: "¿Qué resolución tiene una pantalla FullHD?",
+        options: [
+            "720 × 480 píxeles.",
+            "1280 × 720 píxeles.",
+            "1920 × 1080 píxeles (más de 2 millones de píxeles).",
+            "3840 × 2160 píxeles."
         ],
         answer: 2,
         points: 1
     },
     {
-        category: "Cosmología",
-        question: "Según Neil deGrasse Tyson, si el Universo se formo el 1 de enero y hoy es 31 de diciembre, siguiendo esta analogía, ¿Hace cuanto tiempo sucedió toda la historia humana moderna?.",
+        category: "Cap.2 — Pantallas",
+        question: "¿Qué son los Quantum Dots (qDOT) en tecnología de pantallas?",
         options: [
-            "Sucedió en el último minuto (60 segundos).",
-            "Sucedió en los últimos dos segundos.",
-            "Sucedió en los últimos 10 segundos.",
-            "Sucedió en las últimas 24 horas."
+            "Diminutos LEDs que se colocan detrás de un panel OLED.",
+            "Partículas fotosensibles que mejoran los colores y el contraste en pantallas LCD.",
+            "Cristales que al romperse generan una imagen holográfica.",
+            "Circuitos especiales que aumentan la velocidad del procesador."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Exploración Espacial",
-        question: "¿Qué es Voyager1?",
+        category: "Cap.2 — Pantallas",
+        question: "¿Qué es la tasa de refresco de una pantalla y cuál es la recomendada?",
         options: [
-            "Es un transporte espacial que trae de vuelta a los astronautas del espacio.",
-            "Es un satélite que usa la empresa de Elon Musk SpaceX para ofrecer internet en todo el mundo.",
-            "Es una nave que se lanzó en la década de 70s hacia los confines del Universo.",
-            "Es el nombre del primer robot que aterrizó en Marte en 2020."
+            "La velocidad a la que se enciende la pantalla; 30Hz es suficiente.",
+            "Las veces por segundo que se refresca la imagen; 120Hz es lo mínimo recomendado.",
+            "El brillo máximo de la pantalla; 500 nits es lo recomendado.",
+            "La cantidad de colores que puede reproducir; 1 millón es lo estándar."
         ],
-        answer: 2,
+        answer: 1,
         points: 1
     },
+
+    // --- 2.3 Óptica y Sensores de Imagen ---
     {
-        category: "Exploración Espacial",
-        question: "¿A que se le llamó \"pale blue dot\" ó pálido punto azul\"?",
+        category: "Cap.2 — Óptica",
+        question: "¿Qué tipo de sensor de imagen se usa más en teléfonos inteligentes actuales?",
         options: [
-            "A la primer fotografía de Urano por su distintivo color azul.",
-            "A la primer fotografía de la luna de Jupiter \"Europa\" por sus océanos bajo su superficie.",
-            "Al planeta tierra visto desde Neptuno cuando la nave Voyager volteó hacia atrás y capturó la fotografía.",
-            "Al primer exoplaneta descubierto con agua en su superficie."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Cuál es el nombre y distancia de la estrella más cercana al Sol?",
-        options: [
-            "Sirius, 8 años luz.",
-            "Vega, 3 años luz.",
-            "Alpha Centuri, 4 años luz.",
-            "Betelgeuse, 10 años luz."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Cómo se llama la galaxia que se dirige hacia nosotros con curso de colisión y en cuanto tiempo ocurrirá?",
-        options: [
-            "Andrómeda y colisionará con la vía lactea en 2.5 mil millones de años.",
-            "Galaxia Triángulo y colisionará con la vía láctea en 500 millones de años.",
-            "Andrómeda y colisionará con la vía lactea en mil millones de años.",
-            "La Gran Nube de Magallanes y colisionará en 5 mil millones de años."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Sistema Solar",
-        question: "Del total de toda la masa del Sistema Solar ¿Que porcentaje aproximado concentra el Sol?",
-        options: [
-            "99%",
-            "95%",
-            "90%",
-            "75%"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Cuál es la temperatura promedio del espacio intergaláctico?",
-        options: [
-            "-270 grados celcius.",
-            "24 grados celcius.",
-            "0 grados celcius.",
-            "-50 grados celcius."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astrofísica",
-        question: "¿Cuál es uno de los métodos usados por los astrofísicos para medir distancias en el espacio?",
-        options: [
-            "Se usan pulsaciones de luz láser.",
-            "Se usan las \"Velas Estándar\" que son explosiones de Supernova que siempre brillan igual como referencia.",
-            "Se usan radiotelescopios que miden el brillo y miden la distancia usando la intensidad del mismo.",
-            "Se miden el tamaño aparente de las galaxias con telescopios ópticos convencionales."
+            "CCD (Charge-Coupled Device).",
+            "CMOS (Complementary Metal-Oxide Semiconductor).",
+            "Sensores de rayos X.",
+            "Sensores infrarrojos térmicos."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "En 1687, afirmó que cualquier objeto con masa posee gravedad y su relación directa a mayor masa mayor gravedad y la describió como una \"misteriosa acción a distancia\".",
+        category: "Cap.2 — Óptica",
+        question: "¿Qué es OIS en una cámara de teléfono?",
         options: [
-            "Issac Newton",
-            "Albert Einstein",
-            "Max Planck",
-            "Galileo Galilei"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Física",
-        question: "¿Cuál es el valor más cercano a 1G ó fuerza de gravedad en la tierra?",
-        options: [
-            "10.12 m/s2",
-            "6.7 m/s2",
-            "9.8 m/s2",
-            "15.3 m/s2"
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Física",
-        question: "¿Qué pasa con el tiempo según a teoría de la relatividad general de Albert Einstein si se viaja una velocidad cercana a \"c\" (velocidad de la luz)?",
-        options: [
-            "El tiempo es más lento para el observador y más rápido para el viajero.",
-            "Los tiempos son los mismos ya que al desacelerar se revierte la dilatación del tiempo provocada por la aceleración de la velocidad.",
-            "El tiempo es más lento para el viajero y más rápido para el observador.",
-            "El tiempo se detiene por completo tanto para el viajero como para el observador."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Física",
-        question: "¿Cómo sería un cuerpo humano si la gravedad en la Tierra fuera el doble ó más?",
-        options: [
-            "Resultaría en una estatura más baja y cuerpos más robustos.",
-            "Resultaría en una estatura más alta y cuerpos menos robustos.",
-            "No habría ningún cambio porque el cuerpo se adaptaría rápidamente.",
-            "Sería imposible que existiera vida humana bajo esa gravedad."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Aeroespacial",
-        question: "¿A qué altura sobre el nivel del mar se considera que se está en el espacio?",
-        options: [
-            "100 kilómetros",
-            "80 kilómetros",
-            "90 kilómetros",
-            "50 kilómetros"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Aeroespacial",
-        question: "¿Que enunciado describe mejor a un objeto que esta \"en orbita\"?",
-        options: [
-            "Término utilizado para aumentar la velocidad de un objeto mediante la gravedad.",
-            "Es cuando a un objeto tiene cierta velocidad que le permite girar indefinidamente en una caída infinita.",
-            "Es cuando un objeto flota en el espacio sin moverse porque no hay gravedad.",
-            "Se refiere a cualquier objeto que se encuentra fuera de la atmósfera terrestre."
+            "Online Image Storage, almacenamiento de imágenes en la nube.",
+            "Optical Image Stabilization, estructuras mecánicas para compensar movimientos.",
+            "Optimized Image Software, un programa de edición automática.",
+            "Original Image Sensor, el sensor principal de la cámara."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Sistema Solar",
-        question: "Si los planetas del Sistema Solar no estuvieran girando alrededor del Sol a su velocidad determinada. ¿Caerían directamente hacia el Sol?",
+        category: "Cap.2 — Óptica",
+        question: "¿Qué es un láser según su acrónimo?",
         options: [
-            "Sí, serían atraidos directamente.",
-            "No, porque cada planeta tiene su masa, su propia gravedad y se mantendrían en equilibrio donde mismo.",
-            "No, porque el viento solar los empujaría hacia afuera.",
-            "No, porque la fuerza magnética del Sol los mantendría a distancia fija."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astronomía",
-        question: "¿Qué técnica nos permite ver la composición química de atmósferas en exoplanetas?",
-        options: [
-            "Con la observación directa gracias al telescopio James Webb.",
-            "Usamos el telescopio espacial de rayos X, Chandra.",
-            "Usamos la técnica de espectroscopia que descompone la luz.",
-            "Enviamos sondas espaciales a cada exoplaneta para tomar muestras."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Ciencia",
-        question: "¿Cuál es el elemento mayor constituyente de nuestra atmósfera?",
-        options: [
-            "Oxígeno",
-            "Nitrógeno",
-            "Carbono",
-            "Hidrógeno"
+            "Large Amplified Signal for Electronic Radiation.",
+            "Light Amplified by Stimulated Emission of Radiation.",
+            "Linear Accelerated System for Energy Release.",
+            "Luminous Array of Synchronized Electromagnetic Rays."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Que pasa con la atmósfera a mayor altitud?",
+        category: "Cap.2 — Óptica",
+        question: "¿Qué es el sistema LIDAR y para qué se usa?",
         options: [
-            "Se hace mas densa por esto los aviones vueltan alto.",
-            "Se hace menos densa.",
-            "La densidad permanece constante sin importar la altitud.",
-            "Se vuelve más caliente a mayor altitud porque está más cerca del Sol."
+            "Un sistema de comunicación por láser para satélites.",
+            "Un radar láser que mide distancias; se usa en autos autónomos.",
+            "Un tipo de pantalla holográfica.",
+            "Un método de cifrado de datos por medio de luz."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Sistema Solar",
-        question: "¿Qué planeta tiene 90 veces más la presión atmosférica de la tierra?",
+        category: "Cap.2 — Óptica",
+        question: "¿Qué tipos de células fotorreceptoras existen en la retina del ojo humano?",
         options: [
-            "Júpiter",
-            "Venus",
-            "Saturno",
-            "Marte"
+            "Cilios y flagelos.",
+            "Bastones (detectan luz/figuras) y conos (detectan colores RGB).",
+            "Neuronas y glóbulos rojos.",
+            "Cristalinos y córneas."
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // --- 2.4 Procesadores ---
+    {
+        category: "Cap.2 — Procesadores",
+        question: "¿Qué es un SoC (System on a Chip)?",
+        options: [
+            "Un dispositivo de almacenamiento externo.",
+            "Un circuito integrado que contiene CPU, GPU, ISP y otros componentes en un solo chip.",
+            "Un tipo de cable que conecta periféricos al computador.",
+            "Un formato de compresión de software."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Qué factores afectan a la presión atmosférica?",
+        category: "Cap.2 — Procesadores",
+        question: "¿Qué predice la Ley de Moore?",
         options: [
-            "Temperatura y altitud.",
-            "Calor y aceleración.",
-            "El agua de los mares y la posición de la luna.",
-            "La velocidad de rotación de la Tierra y la cantidad de oxígeno."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Dónde se formaron los elementos, como el Helio, Oxígeno, Carbono, etc.?",
-        options: [
-            "En el interior de estrellas como el Sol.",
-            "A altas temperaturas en las capas internas de la Tierra.",
-            "En el Big Bang y fueron esparcidos por la misma explosión.",
-            "En los cometas que viajan entre las galaxias trayendo materiales."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Física Nuclear",
-        question: "¿Qué es la fusión nuclear?",
-        options: [
-            "Es el proceso de unión de dos atomos para formar uno nuevo más grande.",
-            "Es el proceso de separación de dos atomos para formar uno nuevo más pequeño.",
-            "Es el proceso de calentar materiales hasta que se convierten en plasma.",
-            "Es el proceso de acelerar partículas en un acelerador como el CERN."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Física Nuclear",
-        question: "¿Qué es la fisión nuclear?",
-        options: [
-            "Es el proceso de unión de dos atomos para formar uno nuevo más grande.",
-            "Es el proceso de separación de un atomo pesado para obtener átomos más pequeños.",
-            "Es el proceso de convertir energía solar en electricidad.",
-            "Es el proceso de crear elementos nuevos combinando protones y neutrones."
+            "Que el precio de los procesadores se duplica cada año.",
+            "Que cada dos años se dobla el número de transistores en los procesadores.",
+            "Que las pantallas serán holográficas para 2030.",
+            "Que la velocidad de internet se triplica cada cinco años."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Energía",
-        question: "En la actualidad, ¿Bajo que proceso funcionan todas las plantas nucleares de generación de energía eléctrica?",
+        category: "Cap.2 — Procesadores",
+        question: "¿Qué sucede cuando un procesador se sobrecalienta?",
         options: [
-            "Fusión nuclear.",
-            "Fisión nuclear.",
-            "Combustión de uranio enriquecido.",
-            "Reacciones químicas de plutonio con agua pesada."
+            "Se apaga permanentemente y no se puede recuperar.",
+            "Presenta 'retrasos en transmisión' y su rendimiento se ve afectado.",
+            "Aumenta su velocidad para compensar la temperatura.",
+            "Cambia automáticamente a un procesador de reserva."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Energía",
-        question: "¿Qué proceso nuclear produce más energía?",
+        category: "Cap.2 — Procesadores",
+        question: "¿Qué es la litografía en la fabricación de procesadores?",
         options: [
-            "Fusión nuclear.",
-            "Fisión nuclear.",
-            "Ambos producen exactamente la misma cantidad de energía.",
-            "Depende del tamaño del reactor, no del proceso."
+            "Un arte de impresión manual usado en la industria gráfica.",
+            "Una técnica que graba los cables y transistores del chip usando luz UV en silicio.",
+            "Un proceso químico para limpiar los chips defectuosos.",
+            "Un método de empaquetado de los procesadores en cajas."
         ],
-        answer: 0,
+        answer: 1,
         points: 1
     },
+
+    // --- 2.5 Memoria y Almacenamiento ---
     {
-        category: "Química",
-        question: "¿Cuál es el elemento más simple y abundante en el Universo?",
+        category: "Cap.2 — Memoria",
+        question: "¿Cuál es la diferencia principal entre memoria RAM y almacenamiento (SSD/HDD)?",
         options: [
-            "Helio",
-            "Carbón",
-            "Hidrógeno",
-            "Silicio"
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Astrofísica",
-        question: "¿Qué es la secuencia principal? De la que forman parte el 90% de las estrellas del Universo.",
-        options: [
-            "Se refiere a estrellas que convierten Higrógeno en Helio.",
-            "Se refiere a estrellas que convierten Helio en Oxígeno.",
-            "Se refiere a estrellas que convierten Higrógeno en Carbono.",
-            "Se refiere a estrellas que ya agotaron su combustible nuclear."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astrofísica",
-        question: "¿Qué se necesita para que una estrella pueda formar elementos más pesados como Carbono, Nitrógeno y Oxígeno?",
-        options: [
-            "Que sea más grande que el Sol y que tenga hierro en su interior.",
-            "Que sea más grande que el Sol y con una mayor temperatura.",
-            "Que esté en una galaxia con muchas otras estrellas cercanas.",
-            "Que haya completado al menos un ciclo completo de rotación galáctica."
+            "La RAM es más lenta pero almacena más datos.",
+            "La RAM es volátil (pierde datos al apagarse), el almacenamiento es permanente.",
+            "No hay diferencia; RAM y SSD son exactamente lo mismo.",
+            "El almacenamiento está dentro del procesador; la RAM está fuera."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Astronomía",
-        question: "¿Cada cuanto se estima que ocurren Supernovas en nuestra Galaxia?",
+        category: "Cap.2 — Memoria",
+        question: "¿Qué ventaja tiene un SSD sobre un HDD (disco duro)?",
         options: [
-            "Se estiman dos ó tres cada siglo.",
-            "Se estima una cada siglo.",
-            "Se estima una cada mil años.",
-            "Se estima una cada diez años."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astronomía",
-        question: "¿Cómo se forma una estrella de neutrones?",
-        options: [
-            "Es el remanente (núcleo) de una estrella masiva que colapsó tras una supernova.",
-            "Es el remanente de cuando en un sistema binario dos estrellas chocan entre sí formando una Supernova.",
-            "Se forma cuando una nube de gas interestelar se enfría hasta casi el cero absoluto.",
-            "Se forma por la acumulación de polvo cósmico durante miles de millones de años."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Astronomía",
-        question: "¿Como finalizará su vida nuestro Sol?",
-        options: [
-            "Como una Supernova.",
-            "Como un agujero negro.",
-            "Como una gigante roja para después dejar una enana blanca.",
-            "Como una estrella de neutrones."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Física de Partículas",
-        question: "¿Qué es el modelo estándar de física de partículas?",
-        options: [
-            "Describe el funcionamiento de las fuerzas fundamentales.",
-            "Describe el funcionamiento de la gravedad.",
-            "Describe el funcionamiento de las partículas al interior de los atomos.",
-            "Describe cómo se forman los compuestos químicos orgánicos."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Física de Partículas",
-        question: "¿Qué es el CERN y FermiLab?",
-        options: [
-            "Son lugares donde se investigan sobre la fusión nuclear para generar electricidad.",
-            "Son lugares donde se colisionan partículas para descubrir los secretos del Universo.",
-            "Son lugares donde se colisionan partículas para generar micro agujeros negros e investigarlos.",
-            "Son universidades europeas especializadas en astrofísica teórica."
+            "El SSD es más barato que un HDD en todas las capacidades.",
+            "El SSD es más rápido, silencioso, resistente a golpes y consume menos energía.",
+            "El SSD tiene partes mecánicas que lo hacen más duradero.",
+            "El HDD es más rápido porque usa tecnología magnética."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Física",
-        question: "¿Qué pretende ser la Theory of Everything (ToE) ó Teoría del Todo?",
+        category: "Cap.2 — Memoria",
+        question: "¿Qué significa DDR en 'DDR4 SDRAM'?",
         options: [
-            "Una teoría que fusione matemáticamente la energía y materia oscuras (incluyendo la gravedad) y puedan tener sentido juntas.",
-            "Una teoría que explique de donde venimos y hacia donde vamos en términos de expansionismo del Universo.",
-            "Una teoría que unifique todas las religiones del mundo bajo un marco científico.",
-            "Una teoría para predecir el comportamiento de todos los seres vivos en el planeta."
+            "Digital Data Recovery.",
+            "Double Data Rate (tasa de datos doble).",
+            "Dynamic Drive Replication.",
+            "Direct Display Rendering."
         ],
-        answer: 0,
+        answer: 1,
         points: 1
     },
+
+    // --- 2.6 Sensores ---
     {
-        category: "Física",
-        question: "¿Qué busca unificar la Theory of Everything (ToE)?",
+        category: "Cap.2 — Sensores",
+        question: "¿Qué es un MEMS?",
         options: [
-            "La relatividad general con la mecánica cuántica, incluyendo las fuerzas fundamentales y la gravedad.",
-            "La termodinámica con la mecánica clásica para explicar el movimiento de los planetas.",
-            "La química orgánica con la biología molecular para entender el origen de la vida.",
-            "La astrofísica con la geología para entender la formación de los planetas rocosos."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "¿Cuál es el elemento más importante para la vida?",
-        options: [
-            "Litio",
-            "Hidrógeno",
-            "Carbono",
-            "Helio"
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Cosmología",
-        question: "¿Cuál es el único elemento que fue creado por completo 100% durante el Big Bang?",
-        options: [
-            "Hidrógeno",
-            "Carbono",
-            "Oxígeno",
-            "Helio"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "Además del elemento más importante para la vida ¿Qué elemento también sería apto para formar vida?",
-        options: [
-            "Agua",
-            "Silicio",
-            "Oxígeno",
-            "Calcio"
+            "Un tipo de pantalla para dispositivos médicos.",
+            "Un Sistema Microelectromecánico usado en giroscopios y acelerómetros miniaturizados.",
+            "Un protocolo de comunicación para sensores industriales.",
+            "Un lenguaje de programación para robots."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Biología",
-        question: "¿Qué son las hormonas?",
+        category: "Cap.2 — Sensores",
+        question: "¿Cómo funciona el sistema FaceID de Apple?",
         options: [
-            "Son mensajeras, después de ser secretadas viajan por todo el torrente sanguíneo llevando instrucciones de activación/desactivación de funciones muy variadas.",
-            "Son excretadas al exterior para atraer al sexo opuesto.",
-            "Son medicamentos utilizados para regular los niveles de ciertos componentes sanguíneos.",
-            "Son células especializadas que forman parte del sistema óseo."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Biología",
-        question: "¿Cuál es el elemento más abundante en el cuerpo humano? Presente en todos los líquidos, tejidos, huesos y proteínas.",
-        options: [
-            "Oxígeno",
-            "Carbono",
-            "Agua",
-            "Calcio"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Química",
-        question: "A nivel de estructura atómica, ¿Cuál es la principal diferencia entre un elemento y otro?.",
-        options: [
-            "La temperatura donde fue creado.",
-            "El color y la forma de sus moléculas.",
-            "El número ó cantidad de protones, neutrones y electrones.",
-            "La velocidad a la que se mueven sus átomos."
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Física",
-        question: "¿Qué parte del atomo concentra más del 99% de su masa?",
-        options: [
-            "En los electrones que orbitan por su energía cinética.",
-            "El núcleo del mismo donde están los protones y neutrones.",
-            "En la nube de electrones que rodea al átomo.",
-            "En los quarks que componen las partículas subatómicas externas."
+            "Toma una fotografía 2D y la compara con una imagen guardada.",
+            "Proyecta 30,000 puntos de luz infrarroja para crear un mapa 3D del rostro.",
+            "Usa la huella dactilar para verificar la identidad del usuario.",
+            "Escanea el iris del ojo con un láser rojo visible."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Qué significa la 'G' en la tecnología 5G?",
+        category: "Cap.2 — Sensores",
+        question: "¿Qué mide el sensor de presión barométrica en un teléfono inteligente?",
         options: [
-            "Gigabytes",
-            "Generación",
-            "Global",
-            "Giga-hertz"
+            "La presión del dedo sobre la pantalla táctil.",
+            "La presión atmosférica para apoyar funciones como GPS y detección de pisos.",
+            "La presión del agua cuando el teléfono se sumerge.",
+            "La presión interna de la batería para evitar explosiones."
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // --- 2.7 Baterías ---
+    {
+        category: "Cap.2 — Baterías",
+        question: "¿Qué tecnología de batería se usa en los smartphones actuales?",
+        options: [
+            "Pilas alcalinas recargables.",
+            "Baterías de iones de litio (Li-ion).",
+            "Células de combustible de hidrógeno.",
+            "Baterías de plomo-ácido miniaturizadas."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Para qué sirve un código QR?",
+        category: "Cap.2 — Baterías",
+        question: "¿Qué daño puede causar descargar totalmente un dispositivo con batería Li-ion y dejarlo así?",
         options: [
-            "Para pagar impuestos automáticamente.",
-            "Es un código de respuesta rápida para acceder a información.",
-            "Es un tipo de batería nueva.",
-            "Es una llave digital para desbloquear aplicaciones de pago."
+            "Ninguno; es recomendable descargar al 0% regularmente.",
+            "Produce daños permanentes en la capacidad de la batería.",
+            "Solo afecta si la temperatura es mayor a 50°C.",
+            "Reinicia la configuración de fábrica del dispositivo."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Qué tecnología permite que tu teléfono sepa exactamente dónde estás en un mapa?",
+        category: "Cap.2 — Baterías",
+        question: "¿Cuál es la ventaja principal de las celdas de combustible (Fuel Cells) sobre los motores de combustión?",
         options: [
-            "GPS",
-            "Bluetooth",
-            "Wi-Fi",
-            "NFC"
+            "Son más baratas de producir actualmente.",
+            "Mayor eficiencia energética (40-85% vs 20-30%) y solo emiten vapor de agua.",
+            "Funcionan con gasolina convencional.",
+            "No necesitan ningún mantenimiento."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Baterías",
+        question: "¿Dónde se encuentra una de las reservas más grandes de litio del mundo?",
+        options: [
+            "En Alaska, Estados Unidos.",
+            "En el estado de Sonora, México y el 'Triángulo del Litio' (Perú, Argentina, Chile).",
+            "Exclusivamente en minas de Australia.",
+            "En la Antártida bajo el hielo."
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // --- 2.8 Materiales y Nanotecnología ---
+    {
+        category: "Cap.2 — Materiales",
+        question: "¿Qué es la nanotecnología?",
+        options: [
+            "Una tecnología que solo funciona en el espacio exterior.",
+            "La manipulación de átomos o moléculas con fines industriales, médicos y tecnológicos.",
+            "Un tipo de software para diseño gráfico a escala microscópica.",
+            "Una técnica de producción de alimentos genéticamente modificados."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Materiales",
+        question: "¿Qué propiedades tienen los nanotubos de carbono (CNTs)?",
+        options: [
+            "Son frágiles y pesados, pero buenos conductores.",
+            "Son 100 veces más resistentes que el acero y 6 veces más livianos.",
+            "Son transparentes y rígidos como el diamante.",
+            "Son flexibles pero no conducen electricidad."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Materiales",
+        question: "¿Qué es el grafeno?",
+        options: [
+            "Un tipo de plástico biodegradable.",
+            "Una lámina de un átomo de carbono de espesor, 200 veces más resistente que el acero, flexible y conductora.",
+            "Un metal líquido usado en pantallas flexibles.",
+            "Un material exclusivo para la industria aeroespacial."
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // --- 2.9 Nano-Bio y Genética ---
+    {
+        category: "Cap.2 — Nano-Bio",
+        question: "¿Qué es CRISPR-Cas9?",
+        options: [
+            "Un tipo de procesador cuántico para inteligencia artificial.",
+            "Un método para editar los genomas de organismos vivos, cortando el ADN en ubicaciones específicas.",
+            "Un protocolo de comunicación entre dispositivos IoT.",
+            "Una técnica de impresión 3D a nivel molecular."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Nano-Bio",
+        question: "¿Qué logró el Proyecto Genoma Humano completado en 2005?",
+        options: [
+            "Crear un ser humano artificial en el laboratorio.",
+            "Secuenciar aproximadamente 28,000 genes contenidos en nuestros 23 pares de cromosomas.",
+            "Reprogramar el ADN humano para eliminar todas las enfermedades.",
+            "Descubrir que los humanos tienen 46 pares de cromosomas."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.2 — Nano-Bio",
+        question: "¿Qué porcentaje de nuestro ADN no tiene función conocida según los científicos?",
+        options: [
+            "Aproximadamente el 25%.",
+            "Casi el 90% es considerado 'ADN basura' sin función clara.",
+            "Menos del 5%.",
+            "El 100% tiene función conocida."
+        ],
+        answer: 1,
+        points: 1
+    },
+
+    // ============================================================
+    // CAPÍTULO 3 — PROGRAMACIÓN  (Q86–Q100)  ~15 %
+    // ============================================================
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Qué es un algoritmo en programación?",
+        options: [
+            "Un tipo de virus informático que se propaga por redes.",
+            "Un conjunto de pasos o procesos a seguir para dar solución a un problema.",
+            "El nombre de un lenguaje de programación avanzado.",
+            "Una fórmula matemática exclusiva para inteligencia artificial."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Cuáles son los tres lenguajes mínimos necesarios para crear un sitio web?",
+        options: [
+            "Python, Java y C++.",
+            "HTML (estructura), CSS (diseño) y JavaScript (interactividad).",
+            "Swift, Kotlin y Ruby.",
+            "SQL, PHP y Angular."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Qué es el front-end y el back-end en el desarrollo web?",
+        options: [
+            "Front-end es la parte visual en el navegador; back-end es el código que corre en el servidor.",
+            "Front-end es el hardware; back-end es el software.",
+            "Front-end es el diseño de la base de datos; back-end es la interfaz.",
+            "No hay diferencia; ambos se refieren a lo mismo."
         ],
         answer: 0,
         points: 1
     },
     {
-        category: "Ingeniería de Hardware",
-        question: "¿Cuál de estos componentes es considerado el 'cerebro' de una computadora?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es un API (Application Programming Interface)?",
         options: [
-            "El Monitor",
-            "El Teclado",
-            "El Procesador (CPU)",
-            "El Disco Duro"
-        ],
-        answer: 2,
-        points: 1
-    },
-    {
-        category: "Tecnología Básica",
-        question: "¿Qué significa que un dispositivo tenga Wi-Fi?",
-        options: [
-            "Que puede conectarse a internet sin cables.",
-            "Que tiene mucha batería.",
-            "Que puede tomar fotos bajo el agua.",
-            "Que tiene una pantalla de alta resolución."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Código para Principiantes",
-        question: "En programación, ¿qué es un 'Bucle' (Loop)?",
-        options: [
-            "Un error que borra todo.",
-            "Una instrucción que se repite varias veces.",
-            "Un cable que conecta el mouse.",
-            "Un programa que se ejecuta una sola vez y se cierra."
+            "Un tipo de hardware para conectar periféricos al computador.",
+            "Un conjunto de funciones predefinidas que permite integrar servicios externos como Google Maps o PayPal.",
+            "Un lenguaje de programación exclusivo para aplicaciones móviles.",
+            "Un antivirus que protege las aplicaciones web."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Código para Principiantes",
-        question: "¿Qué es una 'Variable' en un programa?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es el DOM (Document Object Model)?",
         options: [
-            "Un nombre que guarda un valor (como un número o texto).",
-            "Un tipo de pantalla flexible.",
-            "El botón de encendido.",
-            "Una función que solo se ejecuta cuando hay errores."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Tecnología Básica",
-        question: "¿Qué tecnología usas para conectar audífonos inalámbricos a corta distancia?",
-        options: [
-            "Bluetooth",
-            "Radio FM",
-            "Infrarrojo",
-            "Satélite GPS"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Ingeniería de Hardware",
-        question: "¿Cómo se llama la interfaz que te permite usar una computadora tocando la pantalla directamente?",
-        options: [
-            "Pantalla Táctil",
-            "Scanner",
-            "Impresora",
-            "Trackpad Externo"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Código para Principiantes",
-        question: "¿Qué lenguaje de programación es famoso por tener una serpiente en su logo?",
-        options: [
-            "Java",
-            "Python",
-            "C++",
-            "Ruby"
+            "Un tipo de archivo de imagen usado en diseño web.",
+            "El modelo que representa una página web como un árbol de objetos manipulables.",
+            "Un protocolo de seguridad para transmisión de datos.",
+            "Un lenguaje de programación alternativo a JavaScript."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "Cuando un programa tiene un error, ¿cómo le dicen comúnmente en el mundo tecnológico?",
+        category: "Cap.3 — Programación",
+        question: "¿Por qué JavaScript es el lenguaje de programación más popular del mundo?",
         options: [
-            "Glue",
-            "Bug",
-            "Stone",
-            "Crack"
+            "Porque es el más difícil de aprender y solo lo usan expertos.",
+            "Porque se ejecuta dentro de un navegador web, funciona en cualquier dispositivo y es muy versátil.",
+            "Porque fue el primer lenguaje de programación inventado.",
+            "Porque es propiedad exclusiva de Google."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Ingeniería de Hardware",
-        question: "¿Qué aparato envía la señal de internet a toda tu casa?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué diferencia hay entre un lenguaje compilado y uno interpretado?",
         options: [
-            "Router",
-            "Monitor",
-            "Caja de luz",
-            "Transformador eléctrico"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Código para Principiantes",
-        question: "¿Qué es 'Scratch'?",
-        options: [
-            "Una marca de computadoras.",
-            "Un lenguaje de programación por bloques para aprender jugando.",
-            "Un programa para limpiar el teclado.",
-            "Una aplicación de mensajería instantánea para programadores."
+            "Los compilados son más lentos y los interpretados son más rápidos.",
+            "Los compilados generan código máquina directamente; los interpretados necesitan un traductor como un navegador.",
+            "No hay diferencia; todos los lenguajes son iguales.",
+            "Los interpretados solo funcionan en computadoras Mac."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿A qué se refieren cuando dicen que tus fotos están en 'La Nube'?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué protocolo permite la comunicación entre cliente y servidor en internet?",
         options: [
-            "A que están guardadas en servidores en internet.",
-            "A que se suben al cielo físicamente.",
-            "A que están impresas en papel especial.",
-            "A que se guardan temporalmente en la memoria RAM del teléfono."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Futuro del Trabajo",
-        question: "¿Qué hace principalmente un Científico de Datos?",
-        options: [
-            "Arregla cables de internet.",
-            "Analiza mucha información para encontrar patrones y soluciones.",
-            "Dibuja los logos de las empresas.",
-            "Diseña los circuitos de las computadoras."
+            "FTP (File Transfer Protocol).",
+            "HTTP (HyperText Transfer Protocol).",
+            "DNS (Domain Name System).",
+            "SMTP (Simple Mail Transfer Protocol)."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Qué es una 'App'?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es el patrón de arquitectura MVC (Modelo-Vista-Controlador)?",
         options: [
-            "Es una abreviatura de Aplicación (un programa para celular o PC).",
-            "Un tipo de comida para astronautas.",
-            "Un botón secreto del teclado.",
-            "Una unidad de medida de velocidad de internet."
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Tecnología Básica",
-        question: "¿Qué significa USB?",
-        options: [
-            "United States Battery",
-            "Universal Serial Bus (un estándar para conectar dispositivos).",
-            "Ultra Speed Box",
-            "Universal System Backup"
+            "Un tipo de cable para conectar monitores.",
+            "Un patrón que separa la aplicación en Modelo (datos), Vista (interfaz) y Controlador (intermediario).",
+            "Un formato de compresión de video.",
+            "Un sistema de archivos para bases de datos."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Cómo se llama la tecnología que te pone unos lentes y te hace ver un mundo digital?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es React.js?",
         options: [
-            "Realidad Virtual (VR)",
-            "Cine 4D",
-            "Televisión LED",
-            "Holografía clásica"
-        ],
-        answer: 0,
-        points: 1
-    },
-    {
-        category: "Pensamiento Computacional",
-        question: "¿Qué es un 'Algoritmo'?",
-        options: [
-            "Una medicina para la vista.",
-            "Una serie de pasos para completar una tarea o resolver un problema.",
-            "Un tipo de música electrónica.",
-            "Un componente físico dentro de las computadoras."
+            "Un lenguaje de programación independiente creado por Google.",
+            "Una librería de JavaScript creada por Facebook para desarrollar interfaces de usuario.",
+            "Un sistema operativo para servidores web.",
+            "Un protocolo de seguridad para transacciones bancarias."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología Básica",
-        question: "¿Qué significa estar 'Online'?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es Machine Learning?",
         options: [
-            "Estar fuera de línea.",
-            "Estar conectado a la red.",
-            "Estar en una fila esperando.",
-            "Estar descargando una actualización."
+            "Un programa que permite a las máquinas repararse físicamente solas.",
+            "Un subcampo de la IA donde las computadoras mejoran automáticamente a través de la experiencia con datos.",
+            "El manual de usuario que viene con cada computadora nueva.",
+            "Un tipo de hardware especializado para videojuegos."
         ],
         answer: 1,
         points: 1
     },
     {
-        category: "Tecnología e Innovación",
-        question: "¿Qué es la Inteligencia Artificial?",
+        category: "Cap.3 — Programación",
+        question: "¿Qué es Git en el mundo de la programación?",
         options: [
-            "Un robot que limpia la casa.",
-            "La capacidad de las máquinas para aprender y realizar tareas humanas.",
-            "Un juego de video antiguo.",
-            "Un tipo de chip de computadora que solo procesa gráficos."
+            "Un lenguaje de programación para bases de datos.",
+            "Un software de control de versiones que permite rastrear cambios y colaborar en código.",
+            "Un tipo de servidor web de alta velocidad.",
+            "Un editor de texto para diseño gráfico."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Qué son las variables en programación?",
+        options: [
+            "Funciones que eliminan datos de la memoria.",
+            "Espacios que reservan un lugar en la memoria de la computadora para guardar datos.",
+            "Instrucciones que apagan el procesador temporalmente.",
+            "Programas que se ejecutan solo una vez y luego se borran."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Qué tipos de aplicaciones móviles existen?",
+        options: [
+            "Solo aplicaciones nativas, no hay otro tipo.",
+            "Apps web, apps nativas y apps híbridas.",
+            "Apps de escritorio y apps de servidores.",
+            "Solo Progressive Web Apps (PWA)."
+        ],
+        answer: 1,
+        points: 1
+    },
+    {
+        category: "Cap.3 — Programación",
+        question: "¿Qué es una SPA (Single Page Application)?",
+        options: [
+            "Un tipo de servidor que solo aloja una página web.",
+            "Una aplicación que no recarga toda la página al interactuar, ofreciendo una experiencia más fluida.",
+            "Una computadora diseñada para ejecutar solo un programa.",
+            "Un lenguaje de programación para páginas estáticas."
         ],
         answer: 1,
         points: 1
     }
 ];
-
-
-export default questions;

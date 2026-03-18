@@ -276,32 +276,19 @@ function loadQuestion() {
     
     // Category mapping for translations
     const categoryMap = {
-        "Tecnología e Innovación": "cat_tech",
-        "Fundamentos STEM": "cat_science",
-        "Tecnología y Código": "cat_code",
-        "Ciencia y Sociedad": "cat_science",
-        "Ciencia y Medio Ambiente": "cat_science",
-        "Estándares Tecnológicos": "cat_tech",
-        "Educación STEM": "cat_science",
-        "Ciencia": "cat_science",
-        "Cosmología": "cat_astro",
-        "Astrofísica": "cat_astro",
-        "Física de Partículas": "cat_phys",
-        "Física Nuclear": "cat_phys",
-        "Aeroespacial": "cat_eng",
-        "Sistema Solar": "cat_astro",
-        "Astronomía": "cat_astro",
-        "Biología": "cat_bio",
-        "Química": "cat_chem",
-        "Energía": "cat_phys",
-        "Ingeniería de Hardware": "cat_eng",
-        "Código para Principiantes": "cat_code",
-        "Futuro del Trabajo": "cat_future",
-        "Futuro": "cat_future",
-        "Pensamiento Computacional": "cat_logic",
-        "Tecnología Básica": "cat_tech",
-        "Física": "cat_phys",
-        "Historia Natural": "cat_bio"
+        "Introducción / STEM": "cat_science",
+        "Cap.1 — Ciencia": "cat_science",
+        "Cap.2 — Tecnologías Inalámbricas": "cat_tech",
+        "Cap.2 — Seguridad de Redes": "cat_tech",
+        "Cap.2 — Pantallas": "cat_tech",
+        "Cap.2 — Óptica": "cat_eng",
+        "Cap.2 — Procesadores": "cat_eng",
+        "Cap.2 — Memoria": "cat_tech",
+        "Cap.2 — Sensores": "cat_eng",
+        "Cap.2 — Baterías": "cat_eng",
+        "Cap.2 — Materiales": "cat_eng",
+        "Cap.2 — Nano-Bio": "cat_bio",
+        "Cap.3 — Programación": "cat_code"
     };
 
     const catKey = categoryMap[question.category] || 'cat_badge';
