@@ -1233,3 +1233,5 @@ const questions = [
         points: 1
     }
 ];
+
+export default questions;
