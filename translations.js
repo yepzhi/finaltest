@@ -2,6 +2,7 @@ const translations = {
     es: {
         welcome_title: "SIIP NextGEN <span class='highlight'>STEM Test</span>",
         welcome_subtitle: "Evaluación de competencias científicas basada en estándares internacionales PISA.",
+        welcome_badge: "Examen de Certificación",
         total_points: "Puntos Totales",
         questions_count: "Preguntas",
         standard_label: "Estándar",
@@ -62,6 +63,7 @@ const translations = {
     en: {
         welcome_title: "SIIP NextGEN <span class='highlight'>STEM Test</span>",
         welcome_subtitle: "Scientific competency assessment based on PISA international standards.",
+        welcome_badge: "Certification Test",
         total_points: "Total Points",
         questions_count: "Questions",
         standard_label: "Standard",
@@ -122,6 +124,7 @@ const translations = {
     cn: {
         welcome_title: "SIIP NextGEN <span class='highlight'>STEM 测试</span>",
         welcome_subtitle: "基于 PISA 国际标准的科学素养评估。",
+        welcome_badge: "认证测试",
         total_points: "总分",
         questions_count: "问题",
         standard_label: "标准",
