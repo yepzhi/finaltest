@@ -56,6 +56,7 @@ const state = {
 const screens = {
     welcome: document.getElementById('welcome'),
     survey: document.getElementById('survey'),
+    instructions: document.getElementById('instructions'),
     quiz: document.getElementById('quiz'),
     results: document.getElementById('results')
 };
