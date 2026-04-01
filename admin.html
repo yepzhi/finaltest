@@ -63,7 +63,7 @@
             </div>
             <div class="admin-actions">
                 <button id="exportBtn" class="btn btn-primary">Descargar Excel (.xlsx)</button>
-                <a href="index.html" class="btn btn-secondary">Volver al Test</a>
+                <a href="./" class="btn btn-secondary">Volver al Test</a>
             </div>
         </header>
 
@@ -113,7 +113,7 @@
 
         // Security: Simple redirect if not "logged in" (simulated for now since original request asked for a hidden password)
         if (sessionStorage.getItem('adminAuth') !== 'true') {
-            window.location.href = 'index.html';
+            window.location.href = './';
         }
 
         async function loadResults() {
